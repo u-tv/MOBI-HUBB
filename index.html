@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>MOBI-HUBB – Download 1080p 720p 4k HD Movies Free</title>
+    <meta name="description" content="MOBI-HUBB – Download HD movies, Bollywood, Hollywood Hindi Dubbed, web series and full movies for free" />
+    <link rel="canonical" href="https://mobihubb.pages.dev/" />
+    <meta property="og:site_name" content="MOBI-HUBB" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+    
+    <style>
+        /* ===== BASE STYLES ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #121212; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6em; }
+        a { color: #ff6600; text-decoration: none; }
+        a:hover { color: #ff8533; }
+        .container { max-width: 1170px; margin: 0 auto; padding: 0 15px; }
+
+        /* ===== HEADER ===== */
+        .header { background: #1c1e1f; border-bottom: 4px solid #bf7d2e; }
+        .header-top { padding: 15px 0; background: #1c1e1f; }
+        .site-logo { text-align: center; }
+        .site-logo h1 { color: #ff6600; font-size: 28px; }
+        .site-logo p { color: #888; font-size: 12px; }
+
+        .header-main { background: #1c1e1f; border-top: 1px solid #333; padding: 10px 0; }
+        .header-main .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .nav-menu { list-style: none; display: flex; flex-wrap: wrap; gap: 5px; }
+        .nav-menu li { position: relative; }
+        .nav-menu li a { color: #fff; padding: 8px 12px; display: block; font-size: 14px; transition: color 0.3s; cursor: pointer; }
+        .nav-menu li a:hover { color: #ff6600; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #1c1e1f; min-width: 200px; padding: 10px 0; z-index: 100; border: 1px solid #333; list-style: none; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li a { padding: 8px 20px; }
+
+        .search-box { display: flex; align-items: center; }
+        .search-box input { padding: 8px 12px; border: 2px solid #b18036; border-radius: 3px; background: #121212; color: #fff; width: 200px; }
+        .search-box button { padding: 8px 12px; background: #ff6600; border: none; border-radius: 3px; color: #fff; cursor: pointer; margin-left: 5px; }
+
+        .header-bottom { background: #1c1e1f; border-top: 1px solid #333; padding: 8px 0; }
+        .quick-links { text-align: center; }
+        .btn-telegram { display: inline-block; padding: 4px 10px; margin: 2px; background: #33809e; color: #fff; border-radius: 4px; font-size: 12px; }
+        .btn-orange { display: inline-block; padding: 4px 10px; margin: 2px; background: #bf7d2e; color: #fff; border-radius: 4px; font-size: 12px; }
+
+        /* ===== MAIN ===== */
+        main { padding: 20px 0; background: #161618; min-height: 500px; }
+        .page-title-wrap { border: 2px solid #ff6600; border-radius: 6px; padding: 15px; margin: 10px 0 20px; text-align: center; }
+        .page-title-wrap h1 { color: #ff6600; font-size: 24px; }
+        .page-title-wrap p { color: #aaa; font-size: 14px; }
+
+        /* ===== MOVIE GRID ===== */
+        .posts-wrapper { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-bottom: 20px; }
+        .post { background: #1c1e1f; border-radius: 9px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
+        .post:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(255, 102, 0, 0.2); }
+        .content { text-align: center; }
+        .poster-wrap { position: relative; overflow: hidden; }
+        .poster-wrap img { width: 100%; display: block; min-height: 300px; object-fit: cover; }
+        .mpo-quality { position: absolute; bottom: 0; right: 0; background: #ff8c00; color: #fff; font-size: 11px; padding: 2px 8px; z-index: 2; }
+        .mpo-site { position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.8); color: #ff69b4; font-size: 12px; padding: 2px 8px; z-index: 2; }
+        .movie-title { font-size: 13px; font-weight: 700; padding: 10px 10px 5px; color: #fff; }
+        .movie-meta { color: #888; font-size: 11px; padding: 0 10px 10px; }
+
+        /* ===== ADSTERRA ADS - UNIQUE STYLING ===== */
+        .ad-container {
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #333;
+            text-align: center;
+        }
+        .ad-container .ad-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .ad-container a {
+            display: block;
+            padding: 12px;
+            background: linear-gradient(45deg, #ff6600, #ff8533);
+            color: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 15px;
+        }
+        .ad-container a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+        }
+        .ad-container .ad-smart {
+            background: linear-gradient(45deg, #1a237e, #283593);
+        }
+        .ad-container .ad-smart:hover {
+            box-shadow: 0 6px 20px rgba(26, 35, 126, 0.4);
+        }
+
+        /* ===== PAGINATION ===== */
+        .page-numbers { display: flex; justify-content: center; gap: 8px; list-style: none; padding: 20px 0; flex-wrap: wrap; }
+        .page-numbers li { display: inline; }
+        .page-numbers a, .page-numbers span { padding: 8px 14px; background: #1c1e1f; border-radius: 4px; color: #fff; border: 1px solid #333; cursor: pointer; }
+        .page-numbers a:hover { background: #ff6600; }
+        .page-numbers .current { background: #ff6600; border-color: #ff6600; }
+
+        /* ===== MOVIE DETAILS ===== */
+        #movieDetails { padding: 20px 0; display: none; }
+        .back-btn { background: #ff6600; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; margin-bottom: 20px; transition: background 0.3s; }
+        .back-btn:hover { background: #e65c00; }
+        .movie-post { max-width: 900px; margin: auto; background: #111; color: #ddd; padding: 20px; border-radius: 10px; }
+        .mp-hero { width: 300px; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #111; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+        .mp-img-wrap img { width: 100%; display: block; }
+        .mp-meta { padding: 8px 10px; background: linear-gradient(90deg, #ff6600, #ff3300); color: #fff; font-size: 13px; font-weight: 600; text-align: center; }
+        .mp-title { font-size: 26px; font-weight: bold; text-align: center; color: #ff6600; margin: 15px 0 10px; }
+        .mp-intro { text-align: center; font-size: 14px; color: #ddd; margin: 10px 0; }
+        .mp-intro .quality { color: #fff; font-weight: bold; }
+        .mp-intro .site-name { color: #ff6600; font-weight: bold; }
+        .mp-info { background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 15px 0; }
+        .mp-info div { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px; }
+        .mp-info div:last-child { border-bottom: none; }
+        .mp-info b { color: #ff6600; min-width: 120px; }
+        .mp-section { max-width: 600px; margin: 15px auto; background: #111; padding: 15px; border-radius: 10px; }
+        .mp-heading { font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
+        .mp-heading.center-heading { text-align: center; }
+        .mp-heading.ss-heading { text-align: center; }
+        .mp-heading.ss-heading::before, .mp-heading.ss-heading::after { content: ''; display: block; width: 80px; height: 2px; background: #ff6600; margin: 6px auto; }
+        .mp-heading.inline-heading { display: inline; margin-right: 6px; }
+        .mp-plot-text { display: inline; color: #ddd; font-size: 14px; line-height: 1.7; }
+        .mp-screens-wrap { max-width: 600px; margin: 0 auto; }
+        .mp-screens-vertical { border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+        .mp-screens-vertical img { width: 100%; display: block; }
+        .visit-review { max-width: 650px; margin: 20px auto; background: #1c1c1c; padding: 10px 15px; border-left: 3px solid #ff6600; border-radius: 5px; text-align: center; font-size: 14px; }
+        .c1 { color: #b07cff; }
+        .mp-download-info { text-align: center; font-size: 14px; color: #ddd; margin: 8px 0 12px; }
+        .mp-btn { display: block; text-align: center; padding: 10px; margin: 0 auto 10px; max-width: 280px; background: linear-gradient(45deg, #ff6600, #ff8533); color: #fff; border-radius: 6px; transition: transform 0.3s, box-shadow 0.3s; font-size: 14px; }
+        .mp-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4); color: #fff; }
+        .mp-trailer { max-width: 600px; margin: 15px auto; background: #111; border-radius: 8px; overflow: hidden; }
+        .tr-heading { text-align: center; padding: 10px 0 0; }
+        .tr-heading::before, .tr-heading::after { content: ''; display: block; width: 80px; height: 2px; background: #ff6600; margin: 6px auto; }
+        .mp-trailer iframe { width: 100%; height: 360px; border: none; display: block; }
+        .mp-section-full { max-width: 900px; margin: 15px auto; padding: 15px; background: #111; border-radius: 10px; }
+        .mp-section-title { color: #ff6600; font-size: 20px; margin: 0 0 10px 0; }
+        .mp-text { color: #ddd; font-size: 14px; line-height: 1.7; }
+        .mp-review { background: #1a1a1a; padding: 15px; border-left: 4px solid #ff6600; border-radius: 6px; }
+
+        /* ===== FOOTER ===== */
+        .site-footer { background: #000; color: #aaa; padding: 30px 0; border-top: 4px solid #bf7d2e; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+        .footer-grid a { color: #ff6600; }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-to-top { position: fixed; bottom: 30px; right: 20px; padding: 10px 14px; background: #ff6600; color: #fff; border: none; border-radius: 50%; cursor: pointer; z-index: 999; display: none; opacity: 0; transition: opacity 0.3s; font-size: 20px; }
+        .scroll-to-top.show { display: block; opacity: 1; }
+
+        /* ===== POPUP ===== */
+        #movie-bookmark-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; display: none; align-items: center; justify-content: center; }
+        .mbp-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); animation: overlayFadeIn 0.4s ease forwards; }
+        .mbp-content { position: relative; background: #1e1e24; width: 92%; max-width: 440px; border-radius: 20px; padding: 32px; color: #fff; animation: popupFadeIn 0.4s ease forwards; max-height: 90vh; overflow-y: auto; }
+        .mbp-close { position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: #888; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 18px; }
+        .mbp-close:hover { background: #ff4444; color: #fff; }
+        .mbp-icon-container { margin-bottom: 20px; }
+        .mbp-bookmark-icon { font-size: 40px; }
+        .mbp-notice { font-size: 12px; color: #888; font-weight: 700; display: flex; align-items: center; margin-bottom: 10px; }
+        .mbp-red-dot { width: 8px; height: 8px; background: #ff4444; border-radius: 50%; margin-right: 8px; animation: pulse-dot 1.5s infinite; }
+        .mbp-title { font-size: 24px; font-weight: 800; margin-bottom: 20px; line-height: 1.3; }
+        .mbp-highlight { color: #ff6600; }
+        .mbp-visit-box { background: rgba(255,102,0,0.05); border: 1px solid rgba(255,102,0,0.2); border-radius: 14px; padding: 15px 18px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .mbp-visit-text { display: flex; flex-direction: column; }
+        .mbp-visit-label { font-size: 11px; color: #ff8533; font-weight: 800; text-transform: uppercase; }
+        .mbp-domain-link { color: #fff; font-size: 20px; font-weight: 800; }
+        .mbp-visit-btn { background: #ff6600; color: #fff; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; text-decoration: none; }
+        .mbp-share-section { background: rgba(0,0,0,0.2); border-radius: 14px; padding: 18px; }
+        .mbp-share-label { font-size: 12px; color: #888; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+        .mbp-share-box { border: 1px dashed rgba(255,102,0,0.3); border-radius: 10px; padding: 14px; font-size: 13px; color: #ccc; margin-bottom: 14px; line-height: 1.6; }
+        .mbp-share-link { color: #ff6600; font-weight: 800; font-family: monospace; }
+        .mbp-social-icons { display: flex; justify-content: space-between; gap: 6px; }
+        .mbp-social-btn { flex: 1; height: 40px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; cursor: pointer; font-size: 18px; transition: all 0.3s; }
+        .mbp-social-btn:hover { transform: translateY(-3px); background: #ff6600; }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes popupFadeIn { 0% { opacity: 0; transform: scale(0.9) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
+        @keyframes overlayFadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+        @keyframes pulse-dot { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255,68,68,0.7); } 70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255,68,68,0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255,68,68,0); } }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .posts-wrapper { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+            .nav-menu { flex-direction: column; gap: 2px; }
+            .nav-menu li .dropdown-menu { position: static; border: none; padding-left: 20px; }
+            .search-box input { width: 120px; }
+            .header-main .container { flex-direction: column; gap: 10px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 15px; text-align: center; }
+            .mp-hero { width: 200px; }
+            .mp-title { font-size: 20px; }
+            .mp-trailer iframe { height: 220px; }
+            .mp-info div { flex-direction: column; gap: 2px; }
+            .mp-info b { min-width: auto; }
+            .mp-btn { max-width: 100%; }
+            .quick-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; }
+            .btn-telegram, .btn-orange { font-size: 10px; padding: 3px 8px; }
+        }
+        @media (max-width: 480px) {
+            .posts-wrapper { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+            .movie-title { font-size: 11px; padding: 8px 5px 2px; }
+            .movie-meta { font-size: 10px; padding: 0 5px 8px; }
+            .page-title-wrap h1 { font-size: 18px; }
+            .mbp-title { font-size: 20px; }
+            .mbp-domain-link { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <!-- ===== HEADER ===== -->
+        <header class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="site-logo">
+                        <a href="#" onclick="goToPage(1)">
+                            <h1>🎬 MOBI-HUBB</h1>
+                            <p>Download HD Movies Free</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="header-main">
+                <div class="container">
+                    <ul class="nav-menu">
+                        <li><a href="#" onclick="goToPage(1)">🏠 Home</a></li>
+                        <li><a href="#" onclick="goToPage(1)">⭐ Featured</a></li>
+                        <li class="dropdown"><a href="#">📺 TV-Show ▾</a>
+                            <ul class="dropdown-menu"><li><a href="#" onclick="goToPage(1)">TV-Show Hindi</a></li><li><a href="#" onclick="goToPage(1)">WWE TV-Show</a></li></ul>
+                        </li>
+                        <li class="dropdown"><a href="#">🎞 Other ▾</a>
+                            <ul class="dropdown-menu"><li><a href="#" onclick="goToPage(1)">HEVC 720p</a></li><li><a href="#" onclick="goToPage(1)">Dual Audio</a></li><li><a href="#" onclick="goToPage(1)">Multi Audio</a></li></ul>
+                        </li>
+                        <li class="dropdown"><a href="#">🍿 All Categories ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="goToPage(1)">Bollywood</a></li><li><a href="#" onclick="goToPage(1)">Hollywood</a></li>
+                                <li><a href="#" onclick="goToPage(1)">Hollywood in Hindi</a></li><li><a href="#" onclick="goToPage(1)">South in Hindi</a></li>
+                                <li><a href="#" onclick="goToPage(1)">Punjabi</a></li><li><a href="#" onclick="goToPage(1)">Tamil</a></li>
+                                <li><a href="#" onclick="goToPage(1)">Telugu</a></li><li><a href="#" onclick="goToPage(1)">Kannada</a></li>
+                                <li><a href="#" onclick="goToPage(1)">Malayalam</a></li><li><a href="#" onclick="goToPage(1)">Marathi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search for movies..." />
+                        <button onclick="searchMovies()">🔍</button>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="quick-links">
+                        <a href="#" class="btn-telegram">📢 Join Telegram</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">🏠 Home</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">4K</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">Web-Series</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">Bollywood</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">Hindi Dubbed</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">South Hindi Dub</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">Punjabi</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">TV-Shows</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">WWE</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">HollyWood</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">Tamil</a>
+                        <a href="#" class="btn-orange" onclick="goToPage(1)">Telugu</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== MAIN ===== -->
+        <main id="content">
+            <div class="container">
+                <div class="page-title-wrap">
+                    <h1>🎬 Latest Movies Download</h1>
+                    <p>Download 1080p, 720p, 4k HD Movies Free</p>
+                </div>
+                
+                <!-- ===== ADSTERRA AD 1 - TOP ===== -->
+                <div class="ad-container">
+                    <div class="ad-label">⭐ Sponsored</div>
+                    <a href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d" 
+                       target="_blank" 
+                       rel="nofollow noopener"
+                       class="ad-smart"
+                       onclick="trackAdClick('Smart Link 1')">
+                        🔥 Watch Latest Movies Online - Click Here
+                    </a>
+                </div>
+
+                <div class="posts-wrapper" id="movieGrid">
+                    <div style="grid-column:1/-1;text-align:center;padding:50px;color:#ff6600;">Loading movies...</div>
+                </div>
+                
+                <ul class="page-numbers" id="pagination"></ul>
+            </div>
+        </main>
+
+        <!-- ===== MOVIE DETAILS ===== -->
+        <div id="movieDetails">
+            <div class="container">
+                <button class="back-btn" onclick="closeMovieDetails()">← Back to Movies</button>
+                <div class="movie-post" id="movieDetailContent"></div>
+                
+                <!-- ===== ADSTERRA AD 2 - DETAILS PAGE ===== -->
+                <div class="ad-container" id="detailsAd" style="display:none;">
+                    <div class="ad-label">🎯 Recommended</div>
+                    <a href="https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0" 
+                       target="_blank" 
+                       rel="nofollow noopener"
+                       class="ad-smart"
+                       onclick="trackAdClick('Smart Link 2')">
+                        🎬 Watch Full Movie Online Free - Click Now
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== SCROLL TO TOP ===== -->
+        <button id="scroll-to-top" class="scroll-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div><p>Looking for the latest HD movie downloads? Visit our <a href="#" onclick="goToPage(1)">MOBI-HUBB</a> section for daily updates.</p></div>
+                    <div><p>Designed with ❤️ by the <a href="#" onclick="goToPage(1)">MOBI-HUBB Team</a> – <a href="#">Learn more about us</a>.</p></div>
+                    <div><p>🛡️ <a href="#">Privacy Policy</a> | 📄 <a href="#">Terms &amp; Conditions</a></p></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ===== POPUP ===== -->
+    <div id="movie-bookmark-popup">
+        <div class="mbp-overlay" onclick="closePopup()"></div>
+        <div class="mbp-content">
+            <button class="mbp-close" onclick="closePopup()">✕</button>
+            <div class="mbp-icon-container"><div class="mbp-bookmark-icon">🔖</div></div>
+            <div class="mbp-notice"><span class="mbp-red-dot"></span> URGENT NOTICE</div>
+            <h2 class="mbp-title">Kindly bookmark our<br />new <span class="mbp-highlight">official</span> domain</h2>
+            <div class="mbp-visit-box">
+                <div class="mbp-visit-text">
+                    <span class="mbp-visit-label">VISIT &amp; SAVE NOW</span>
+                    <a href="https://mobihubb.pages.dev" class="mbp-domain-link">mobihubb.pages.dev</a>
+                </div>
+                <a href="https://mobihubb.pages.dev" class="mbp-visit-btn">➜</a>
+            </div>
+            <div class="mbp-share-section">
+                <p class="mbp-share-label">SHARE WITH FRIENDS:</p>
+                <div class="mbp-share-box">
+                    <p>🙏 Humble request — please share this with your friends! 🌟</p>
+                    <p class="mbp-share-link">https://mobihubb.pages.dev</p>
+                </div>
+                <div class="mbp-social-icons">
+                    <button class="mbp-social-btn fb-btn">📘</button>
+                    <button class="mbp-social-btn x-btn">🐦</button>
+                    <button class="mbp-social-btn whatsapp-btn">💬</button>
+                    <button class="mbp-social-btn telegram-btn">📨</button>
+                    <button class="mbp-social-btn copy-btn" onclick="copyLink()">📋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ============================================================
+        // 🎯 ADSTERRA AD TRACKING
+        // ============================================================
+        function trackAdClick(adName) {
+            console.log(`📊 Ad Clicked: ${adName}`);
+            // आप चाहें तो यहाँ Google Analytics या कोई और Tracking Add कर सकते हैं
+        }
+
+        // ============================================================
+        // 📦 MOVIE DATABASE - 13 REAL MOVIES
+        // ============================================================
+        const movies = [
+            {
+                id: 1,
+                title: "Mario (2025) 1080p | 720p | 480p WEB-HDRip [Hindi + Telugu]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2FxmKrhG7KVzikjrvCCenGHJkyDRf.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi + Telugu",
+                director: "Aaron Horvath, Michael Jelenic",
+                genres: ["Adventure", "Animation", "Comedy", "Family", "Fantasy"],
+                releaseDate: "2025",
+                imdb: "N/A",
+                cast: ["Anya Taylor-Joy", "Charlie Day", "Chris Pratt", "Jack Black", "Keegan-Michael Key"],
+                plot: "The beloved video game character comes to life in this animated adventure.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mario+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mario+Scene+2",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mario+Scene+3"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 450MB", size: "450MB", link: "#" },
+                    { quality: "720p – 1.5GB", size: "1.5GB", link: "#" },
+                    { quality: "1080p – 3.2GB", size: "3.2GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 2,
+                title: "Satluj (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2F6kolLVjVZb29kj9tEebDnTE0JMD.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi",
+                director: "Honey Trehan",
+                genres: ["Crime", "Drama", "History"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Arjun Rampal", "Diljit Dosanjh", "Geetika Vidya", "Kanwaljit Singh", "Suvinder Vicky"],
+                plot: "A historical drama set in the Punjab region with powerful performances.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Satluj+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Satluj+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 500MB", size: "500MB", link: "#" },
+                    { quality: "720p – 1.8GB", size: "1.8GB", link: "#" },
+                    { quality: "1080p – 3.5GB", size: "3.5GB", link: "#" },
+                    { quality: "4K – 8GB", size: "8GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 3,
+                title: "Chand Mera Dil (2026) 1080p | 720p | 480p WEB-HDRip [Hindi]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2F3gXnELsL9QrZLxeP95OvJBeK1Uk.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi",
+                director: "Parnika Narula, Shyam Pandya, Vipul S. Arora, Vivek Soni",
+                genres: ["Drama", "Romance"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Aastha Singh", "Ananya Panday", "Lakshya Lalwani", "Manish Chaudhary", "Paresh Pahuja"],
+                plot: "A romantic drama exploring the complexities of modern relationships.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Romance+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Romance+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 400MB", size: "400MB", link: "#" },
+                    { quality: "720p – 1.2GB", size: "1.2GB", link: "#" },
+                    { quality: "1080p – 2.5GB", size: "2.5GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 4,
+                title: "Minions and Monsters (2026) 1080p | 720p | 480p HDTC [Hindi]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2FhPWctCY0B64pYJaKXj7S22kYcEM.jpg",
+                quality: "HDTC",
+                language: "Hindi",
+                director: "Pierre Coffin",
+                genres: ["Adventure", "Animation", "Comedy", "Family", "Fantasy"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Allison Janney", "Christoph Waltz", "Jeff Bridges", "Pierre Coffin", "Trey Parker"],
+                plot: "The Minions are back in another hilarious adventure with monsters!",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Minions+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Minions+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 400MB", size: "400MB", link: "#" },
+                    { quality: "720p – 1.3GB", size: "1.3GB", link: "#" },
+                    { quality: "1080p – 2.8GB", size: "2.8GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 5,
+                title: "Mollywood Times (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2Fu9N9jbn2jxMfj2JnrJixfUP5ENh.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi + Multi Audio",
+                director: "Abhinav Sunder Nayak, Amrutha Mariam, Athul Kishan",
+                genres: ["Comedy", "Drama"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Althaf Salim", "Naslen K. Gafoor", "Roshan Shanavas", "Sangeeth Prathap", "Sharafudheen"],
+                plot: "A Malayalam comedy-drama about the film industry.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Comedy+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Comedy+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 500MB", size: "500MB", link: "#" },
+                    { quality: "720p – 1.6GB", size: "1.6GB", link: "#" },
+                    { quality: "1080p – 3.2GB", size: "3.2GB", link: "#" },
+                    { quality: "4K – 7.5GB", size: "7.5GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 6,
+                title: "Daadi Ki Shaadi (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2FhKbQjE5ZcZUpuzApEjyoVCUWwdx.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi",
+                director: "Ashish R. Mohan",
+                genres: ["Comedy", "Drama", "Family"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Kapil Sharma", "Neetu Singh", "R. Sarathkumar", "Riddhima Kapoor Sahni", "Sadia Khateeb"],
+                plot: "A heartwarming family comedy about a grandmother's wedding.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Family+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Family+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 400MB", size: "400MB", link: "#" },
+                    { quality: "720p – 1.3GB", size: "1.3GB", link: "#" },
+                    { quality: "1080p – 2.8GB", size: "2.8GB", link: "#" },
+                    { quality: "4K – 6.5GB", size: "6.5GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 7,
+                title: "Karakkam (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2FxCc5K9hy7Nkmkag1yS3HC75j9e2.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi + Multi Audio",
+                director: "Subhash Lalitha Subrahmanian",
+                genres: ["Comedy", "Horror"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Abhiram Radhakrishnan", "Femina George", "Manikandan Achari", "Praveen TJ", "Sreenath Bhasi"],
+                plot: "A horror-comedy that will make you laugh and scream!",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Horror+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Horror+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 450MB", size: "450MB", link: "#" },
+                    { quality: "720p – 1.4GB", size: "1.4GB", link: "#" },
+                    { quality: "1080p – 3GB", size: "3GB", link: "#" },
+                    { quality: "4K – 7GB", size: "7GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 8,
+                title: "Obsession (2026) 1080p | 720p | 480p WEB-HDRip [Hindi + English]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2FdoQPOCVlIWZBRC2ZVsSXHi0luL8.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi + English",
+                director: "Arnav Shah, Curry Barker, Grayson Alamango Shapiro",
+                genres: ["Horror", "Thriller"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Andy Richter", "Cooper Tomlinson", "Inde Navarrette", "Megan Lawless", "Michael Johnston"],
+                plot: "A psychological horror thriller that explores the dark side of obsession.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Thriller+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Thriller+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 400MB", size: "400MB", link: "#" },
+                    { quality: "720p – 1.2GB", size: "1.2GB", link: "#" },
+                    { quality: "1080p – 2.6GB", size: "2.6GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 9,
+                title: "Enola Holmes 3 (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F01%2F7kRYHH9H9PjBFwz1FprbHB2AAjI.jpg",
+                quality: "Web-HDRip",
+                language: "Hindi + Multi Audio",
+                director: "James O'Donnell, Philip Barantini, Sam Rook, Sarah Lucas",
+                genres: ["Adventure", "Crime", "Mystery"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Henry Cavill", "Himesh Patel", "Louis Partridge", "Millie Bobby Brown", "Sharon Duncan-Brewster"],
+                plot: "The third installment of the Enola Holmes detective series.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mystery+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mystery+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 500MB", size: "500MB", link: "#" },
+                    { quality: "720p – 1.8GB", size: "1.8GB", link: "#" },
+                    { quality: "1080p – 3.5GB", size: "3.5GB", link: "#" },
+                    { quality: "4K – 8GB", size: "8GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 10,
+                title: "French Girl (2024) 1080p | 720p | 480p WEB-HDRip [Hindi + English]",
+                poster: "https://via.placeholder.com/400x600/1a1a1a/ff6600?text=French+Girl",
+                quality: "Web-HDRip",
+                language: "Hindi + English",
+                director: "Various Directors",
+                genres: ["Comedy", "Romance"],
+                releaseDate: "2024",
+                imdb: "N/A",
+                cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
+                plot: "A romantic comedy set in the beautiful city of Paris.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Paris+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Paris+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 350MB", size: "350MB", link: "#" },
+                    { quality: "720p – 1.1GB", size: "1.1GB", link: "#" },
+                    { quality: "1080p – 2.4GB", size: "2.4GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 11,
+                title: "The Devil Wears Prada 2 (2026) 4k | 1080p | 720p | 480p WEB-HDRip [English]",
+                poster: "https://via.placeholder.com/400x600/1a1a1a/ff6600?text=Devil+Wears+Prada+2",
+                quality: "Web-HDRip",
+                language: "English",
+                director: "Various Directors",
+                genres: ["Comedy", "Drama"],
+                releaseDate: "2026",
+                imdb: "N/A",
+                cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
+                plot: "The sequel to the iconic fashion industry film.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Fashion+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Fashion+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 450MB", size: "450MB", link: "#" },
+                    { quality: "720p – 1.5GB", size: "1.5GB", link: "#" },
+                    { quality: "1080p – 3.2GB", size: "3.2GB", link: "#" },
+                    { quality: "4K – 7.5GB", size: "7.5GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 12,
+                title: "Hunting Jessica Brok (2025) 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                poster: "https://via.placeholder.com/400x600/1a1a1a/ff6600?text=Hunting+Jessica+Brok",
+                quality: "Web-HDRip",
+                language: "Hindi + Multi Audio",
+                director: "Various Directors",
+                genres: ["Crime", "Thriller"],
+                releaseDate: "2025",
+                imdb: "N/A",
+                cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
+                plot: "A crime thriller that keeps you guessing until the very end.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Crime+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Crime+Scene+2"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 380MB", size: "380MB", link: "#" },
+                    { quality: "720p – 1.3GB", size: "1.3GB", link: "#" },
+                    { quality: "1080p – 2.7GB", size: "2.7GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            },
+            {
+                id: 13,
+                title: "Indias Got Latent – Season 2 (2026) WEB-HDRip [EP 02] [Hindi]",
+                poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F06%2F20%2FAAAABbgnPgppSSvD8X7Z83GYHcMXmu8I3qzjo0ufl8B7M22A81-StJ_BzKBjZQi0tEJtCmGCUygiDJMvfZnMhc5fAIKjw19m3aJQj_X6.jpgr55fb856507e861e6a84.jpg",
+                quality: "Season 2",
+                language: "Hindi",
+                director: "Samay Raina",
+                genres: ["Comedy", "Reality"],
+                releaseDate: "June 19, 2026",
+                imdb: "8.6",
+                cast: ["Samay Raina", "Balraj Singh Ghai", "Aashish Solanki", "Nishant Tanwar", "Yashraj Mehra"],
+                plot: "Samay Raina and the guest judges hilariously critique the untapped, undeniably entertaining 'latent' talents of aspiring performers.",
+                screenshots: [
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Latent+Scene+1",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Latent+Scene+2",
+                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Latent+Scene+3"
+                ],
+                downloadLinks: [
+                    { quality: "480p – 350MB", size: "350MB", link: "#" },
+                    { quality: "720p – 1.2GB", size: "1.2GB", link: "#" },
+                    { quality: "1080p – 2.5GB", size: "2.5GB", link: "#" }
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+            }
+        ];
+
+        // ============================================================
+        // 📄 PAGINATION ENGINE - 735 PAGES
+        // ============================================================
+        const MOVIES_PER_PAGE = 12;
+        const TOTAL_PAGES = 735;
+        let currentPage = 1;
+        let allMoviesCache = [];
+        let searchQuery = '';
+
+        function generateAllMovies() {
+            const all = [];
+            const baseMovies = [...movies];
+            for (let page = 0; page < TOTAL_PAGES; page++) {
+                const shuffled = [...baseMovies];
+                for (let i = 0; i < shuffled.length; i++) {
+                    const j = (i + page * 7) % shuffled.length;
+                    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+                }
+                shuffled.forEach((movie, index) => {
+                    const newId = movie.id + (page * baseMovies.length * 2) + index;
+                    all.push({
+                        ...movie,
+                        id: newId,
+                        title: movie.title + (page > 0 ? ` [${page}]` : ''),
+                        page: page + 1,
+                        index: index + 1
+                    });
+                });
+            }
+            return all;
+        }
+
+        function getPageMovies(page) {
+            const start = (page - 1) * MOVIES_PER_PAGE;
+            const end = Math.min(start + MOVIES_PER_PAGE, allMoviesCache.length);
+            return allMoviesCache.slice(start, end);
+        }
+
+        function getPageFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            const page = parseInt(params.get('page'));
+            if (page && page >= 1 && page <= TOTAL_PAGES) return page;
+            const path = window.location.pathname;
+            const match = path.match(/\/page\/(\d+)\/?/);
+            if (match) {
+                const p = parseInt(match[1]);
+                if (p >= 1 && p <= TOTAL_PAGES) return p;
+            }
+            return 1;
+        }
+
+        function updateURL(page) {
+            const url = new URL(window.location);
+            url.searchParams.set('page', page);
+            window.history.pushState({ page: page }, '', url);
+        }
+
+        function displayMovies(movieList) {
+            const grid = document.getElementById('movieGrid');
+            if (!grid) return;
+            if (!movieList || movieList.length === 0) {
+                grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:50px;color:#888;"><h3>No movies found</h3></div>`;
+                return;
+            }
+            grid.innerHTML = movieList.map(movie => `
+                <article class="post" onclick="showMovieDetails(${movie.id})">
+                    <div class="content">
+                        <div class="poster-wrap">
+                            <img src="${movie.poster}" alt="${movie.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x600/1a1a1a/ff6600?text=MOBI-HUBB'" />
+                            <div class="mpo-quality">${movie.quality}</div>
+                            <div class="mpo-site">\\=- MOBI-HUBB -=/</div>
+                        </div>
+                        <h2 class="movie-title">${movie.title}</h2>
+                        <p class="movie-meta">⭐ ${movie.imdb} | ${movie.language}</p>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function updatePagination(current) {
+            const pagination = document.getElementById('pagination');
+            let html = '';
+            const start = (current - 1) * MOVIES_PER_PAGE + 1;
+            const end = Math.min(current * MOVIES_PER_PAGE, allMoviesCache.length);
+            html += `<li style="color:#888;padding:8px 14px;">${start}-${end} of ${allMoviesCache.length}</li>`;
+            if (current > 1) {
+                html += `<li><a class="page-numbers" onclick="goToPage(${current - 1})">‹ Prev</a></li>`;
+            }
+            if (current <= 3) {
+                for (let i = 1; i <= Math.min(5, TOTAL_PAGES); i++) {
+                    html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                }
+                if (TOTAL_PAGES > 5) {
+                    html += `<li><span class="page-numbers dots">…</span></li>`;
+                    html += `<li><a class="page-numbers" onclick="goToPage(${TOTAL_PAGES})">${TOTAL_PAGES}</a></li>`;
+                }
+            } else if (current >= TOTAL_PAGES - 2) {
+                html += `<li><a class="page-numbers" onclick="goToPage(1)">1</a></li>`;
+                html += `<li><span class="page-numbers dots">…</span></li>`;
+                for (let i = TOTAL_PAGES - 4; i <= TOTAL_PAGES; i++) {
+                    html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                }
+            } else {
+                html += `<li><a class="page-numbers" onclick="goToPage(1)">1</a></li>`;
+                html += `<li><span class="page-numbers dots">…</span></li>`;
+                for (let i = current - 2; i <= current + 2; i++) {
+                    html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                }
+                html += `<li><span class="page-numbers dots">…</span></li>`;
+                html += `<li><a class="page-numbers" onclick="goToPage(${TOTAL_PAGES})">${TOTAL_PAGES}</a></li>`;
+            }
+            if (current < TOTAL_PAGES) {
+                html += `<li><a class="page-numbers next" onclick="goToPage(${current + 1})">Next »</a></li>`;
+            }
+            pagination.innerHTML = html;
+        }
+
+        function goToPage(page) {
+            if (page < 1 || page > TOTAL_PAGES) return;
+            currentPage = page;
+            const pageMovies = searchQuery ? 
+                allMoviesCache.filter(m => 
+                    m.title.toLowerCase().includes(searchQuery) ||
+                    m.genres.some(g => g.toLowerCase().includes(searchQuery)) ||
+                    m.cast.some(c => c.toLowerCase().includes(searchQuery))
+                ).slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE) :
+                getPageMovies(page);
+            displayMovies(pageMovies);
+            updatePagination(page);
+            updateURL(page);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (document.getElementById('movieDetails').style.display !== 'none') {
+                closeMovieDetails();
+            }
+        }
+
+        // ============================================================
+        // 📄 MOVIE DETAILS
+        // ============================================================
+        function showMovieDetails(movieId) {
+            const movie = allMoviesCache.find(m => m.id === movieId);
+            if (!movie) return;
+
+            document.querySelector('.nv-index-posts').style.display = 'none';
+            document.getElementById('movieDetails').style.display = 'block';
+            document.querySelector('.page-title-wrap').style.display = 'none';
+            document.getElementById('pagination').style.display = 'none';
+            document.getElementById('detailsAd').style.display = 'block';
+
+            const container = document.getElementById('movieDetailContent');
+            container.innerHTML = `
+                <div class="mp-hero">
+                    <div class="mp-img-wrap"><img src="${movie.poster}" alt="${movie.title}" /></div>
+                    <div class="mp-meta">⭐ ${movie.imdb} IMDb | ${movie.language} | ${movie.quality}</div>
+                </div>
+                <h1 class="mp-title">${movie.title}</h1>
+                <p class="mp-intro">Download <span class="quality">${movie.quality}</span> <span class="site-name">MOBI-HUBB</span> - Full Movie in high quality.</p>
+                <div class="mp-info">
+                    <div><b>Director:</b> <span>${movie.director}</span></div>
+                    <div><b>All Genres:</b> <span>${movie.genres.join(', ')}</span></div>
+                    <div><b>Released Date:</b> <span>${movie.releaseDate}</span></div>
+                    <div><b>Language:</b> <span>${movie.language}</span></div>
+                    <div><b>Cast:</b> <span>${movie.cast.join(', ')}</span></div>
+                </div>
+                <div class="mp-section">
+                    <h2 class="mp-heading inline-heading">Plot:</h2>
+                    <p class="mp-plot-text">${movie.plot}</p>
+                </div>
+                <div class="mp-section">
+                    <h2 class="mp-heading ss-heading">📸 Screenshots</h2>
+                    <div class="mp-screens-wrap">
+                        ${movie.screenshots.map(img => `<div class="mp-screens-vertical"><img src="${img}" alt="Screenshot" loading="lazy" /></div>`).join('')}
+                    </div>
+                </div>
+                <div class="visit-review"><strong>Visit & Share and Bookmark (Ctrl + D)</strong> <span class="c1">MOBI-HUBB</span></div>
+                <div class="mp-section">
+                    <h2 class="mp-heading center-heading">📥 Download Links & Watch Online</h2>
+                    <p class="mp-download-info">Language: <span class="quality">${movie.language}</span></p>
+                    <a href="${movie.trailer}" target="_blank" class="mp-btn">▶️ Watch Online</a>
+                    ${movie.downloadLinks.map(link => `<a href="${link.link}" class="mp-btn">📥 ${link.quality}</a>`).join('')}
+                </div>
+                <div class="mp-trailer">
+                    <h2 class="mp-heading tr-heading">🎥 Watch Trailer</h2>
+                    <iframe src="${movie.trailer}" allowfullscreen></iframe>
+                </div>
+                <div class="mp-section-full">
+                    <h2 class="mp-section-title">📝 User Reviews</h2>
+                    <div class="mp-review"><p>${movie.title} delivers a compelling cinematic experience. The storyline keeps you engaged throughout.</p></div>
+                </div>
+                <div class="mp-section-full">
+                    <h2 class="mp-section-title">❓ Frequently Asked Questions</h2>
+                    <div class="mp-text">
+                        <p><strong>Who is the star cast of ${movie.title}?</strong></p>
+                        <p>The main star cast includes ${movie.cast.join(', ')}.</p>
+                        <br />
+                        <p><strong>In which languages is ${movie.title} available?</strong></p>
+                        <p>It is available in ${movie.language} with high quality HD 480p, 720p, and 1080p resolution.</p>
+                    </div>
+                </div>
+            `;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeMovieDetails() {
+            document.querySelector('.nv-index-posts').style.display = 'block';
+            document.getElementById('movieDetails').style.display = 'none';
+            document.querySelector('.page-title-wrap').style.display = 'block';
+            document.getElementById('pagination').style.display = 'flex';
+            document.getElementById('detailsAd').style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============================================================
+        // 🔍 SEARCH
+        // ============================================================
+        function searchMovies() {
+            const query = document.getElementById('searchInput').value.trim().toLowerCase();
+            searchQuery = query;
+            if (!query) { goToPage(1); return; }
+            const results = allMoviesCache.filter(m =>
+                m.title.toLowerCase().includes(query) ||
+                m.genres.some(g => g.toLowerCase().includes(query)) ||
+                m.cast.some(c => c.toLowerCase().includes(query))
+            );
+            displayMovies(results.slice(0, MOVIES_PER_PAGE));
+            const pagination = document.getElementById('pagination');
+            if (results.length > MOVIES_PER_PAGE) {
+                const totalSearchPages = Math.ceil(results.length / MOVIES_PER_PAGE);
+                let html = `<li style="color:#888;padding:8px 14px;">1-${Math.min(MOVIES_PER_PAGE, results.length)} of ${results.length}</li>`;
+                for (let i = 1; i <= Math.min(totalSearchPages, 5); i++) {
+                    html += `<li><a class="page-numbers" onclick="loadSearchPage(${i})">${i}</a></li>`;
+                }
+                if (totalSearchPages > 5) html += `<li><span class="page-numbers dots">…</span></li>`;
+                pagination.innerHTML = html;
+            } else {
+                pagination.innerHTML = '';
+            }
+            if (results.length === 0) {
+                document.getElementById('movieGrid').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:50px;color:#888;"><h3>No movies found for "${query}"</h3></div>`;
+            }
+        }
+
+        function loadSearchPage(page) {
+            const results = allMoviesCache.filter(m =>
+                m.title.toLowerCase().includes(searchQuery) ||
+                m.genres.some(g => g.toLowerCase().includes(searchQuery)) ||
+                m.cast.some(c => c.toLowerCase().includes(searchQuery))
+            );
+            const start = (page - 1) * MOVIES_PER_PAGE;
+            displayMovies(results.slice(start, start + MOVIES_PER_PAGE));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============================================================
+        // 📋 COPY LINK
+        // ============================================================
+        function copyLink() {
+            const url = 'https://mobihubb.pages.dev';
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    const btn = document.querySelector('.copy-btn');
+                    btn.textContent = '✅';
+                    setTimeout(() => btn.textContent = '📋', 2000);
+                });
+            }
+        }
+
+        // ============================================================
+        // 🎯 POPUP
+        // ============================================================
+        function closePopup() {
+            document.getElementById('movie-bookmark-popup').style.display = 'none';
+            localStorage.setItem('mobihubb_popup_closed', new Date().getTime());
+        }
+
+        function checkPopup() {
+            const lastClosed = localStorage.getItem('mobihubb_popup_closed');
+            const now = new Date().getTime();
+            const cooldown = 24 * 60 * 60 * 1000;
+            if (!lastClosed || (now - lastClosed > cooldown)) {
+                document.getElementById('movie-bookmark-popup').style.display = 'flex';
+            }
+        }
+
+        // ============================================================
+        // 🚀 INIT
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            allMoviesCache = generateAllMovies();
+            const page = getPageFromURL();
+            currentPage = page;
+            const pageMovies = getPageMovies(page);
+            displayMovies(pageMovies);
+            updatePagination(page);
+            
+            document.getElementById('searchInput').addEventListener('keyup', function(e) {
+                if (e.key === 'Enter') searchMovies();
+            });
+            
+            window.addEventListener('popstate', function(e) {
+                const page = getPageFromURL();
+                currentPage = page;
+                const pageMovies = getPageMovies(page);
+                displayMovies(pageMovies);
+                updatePagination(page);
+            });
+            
+            const scrollBtn = document.getElementById('scroll-to-top');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) { scrollBtn.classList.add('show'); }
+                else { scrollBtn.classList.remove('show'); }
+            });
+            
+            setTimeout(checkPopup, 3000);
+            console.log('🎬 MOBI-HUBB Loaded with Adsterra Smart Links!');
+        });
+    </script>
+</body>
+</html>
