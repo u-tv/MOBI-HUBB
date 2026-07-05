@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>MOBI-HUBB – Watch & Download 1080p 720p 4k HD Movies Free</title>
     <meta name="description" content="MOBI-HUBB – Watch and Download HD movies, Bollywood, Hollywood Hindi Dubbed, web series and full movies for free" />
-    <meta name="robots" content="follow, index" />
     <link rel="canonical" href="https://mobihubb.pages.dev/" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="MOBI-HUBB – Watch & Download HD Movies Free" />
-    <meta property="og:description" content="MOBI-HUBB – Watch and Download HD movies, Bollywood, Hollywood Hindi Dubbed, web series and full movies for free" />
-    <meta property="og:url" content="https://mobihubb.pages.dev/" />
     <meta property="og:site_name" content="MOBI-HUBB" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
     
@@ -85,24 +79,17 @@
         .page-numbers .current { background: #ff6600; border-color: #ff6600; }
         .page-numbers .info { color: #888; background: transparent; border: none; cursor: default; }
 
-        /* ===== MOVIE PLAYER + DETAILS ===== */
+        /* ===== MOVIE PLAYER ===== */
         #moviePlayer { padding: 20px 0; display: none; }
         .back-btn { background: #ff6600; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; margin-bottom: 20px; transition: background 0.3s; }
         .back-btn:hover { background: #e65c00; }
         .movie-player-container { max-width: 900px; margin: auto; background: #111; border-radius: 10px; padding: 20px; }
-
-        /* Video Player */
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
         .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-        /* Movie Info Below Player */
         .player-movie-info { padding: 15px 0; }
         .player-movie-title { font-size: 24px; font-weight: bold; color: #ff6600; }
         .player-movie-meta { color: #888; font-size: 14px; margin: 5px 0; }
         .player-movie-plot { color: #ddd; font-size: 14px; line-height: 1.7; margin-top: 10px; }
-
-        /* Download Links Below Player */
         .player-downloads { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
         .player-download-btn { padding: 8px 16px; background: linear-gradient(45deg, #ff6600, #ff8533); color: #fff; border-radius: 6px; font-size: 13px; transition: transform 0.3s; }
         .player-download-btn:hover { transform: translateY(-2px); }
@@ -168,7 +155,7 @@
         <header class="header">
             <div class="header-top">
                 <div class="container">
-                    <div class="site-logo" onclick="goToPage(1)">
+                    <div class="site-logo" onclick="goHome()">
                         <h1>🎬 MOBI-HUBB</h1>
                         <p>Watch & Download HD Movies Free</p>
                     </div>
@@ -178,7 +165,7 @@
             <nav class="header-main">
                 <div class="container">
                     <ul class="nav-menu" id="navMenu">
-                        <li><a href="#" onclick="goToPage(1)" id="navHome">🏠 Home</a></li>
+                        <li><a href="#" onclick="goHome()" id="navHome">🏠 Home</a></li>
                         <li><a href="#" onclick="filterFeatured()" id="navFeatured">⭐ Featured</a></li>
                         <li class="dropdown">
                             <a href="#">📺 TV-Show ▾</a>
@@ -222,7 +209,7 @@
                 <div class="container">
                     <div class="quick-links">
                         <a href="#" class="btn-telegram" onclick="window.open('https://t.me/mobihubb','_blank')">📢 Join Telegram</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">🏠 Home</a>
+                        <a href="#" class="btn-orange" onclick="goHome()">🏠 Home</a>
                         <a href="#" class="btn-orange" onclick="filterCategory('4k')">4K</a>
                         <a href="#" class="btn-orange" onclick="filterCategory('web-series')">Web-Series</a>
                         <a href="#" class="btn-orange" onclick="filterCategory('bollywood')">Bollywood</a>
@@ -239,7 +226,7 @@
             </div>
         </header>
 
-        <!-- ===== MAIN - MOVIE GRID ===== -->
+        <!-- ===== MAIN ===== -->
         <main id="content">
             <div class="container">
                 <div class="page-title-wrap">
@@ -261,33 +248,24 @@
             </div>
         </main>
 
-        <!-- ===== MOVIE PLAYER + DETAILS ===== -->
+        <!-- ===== MOVIE PLAYER ===== -->
         <div id="moviePlayer">
             <div class="container">
                 <button class="back-btn" onclick="closeMoviePlayer()">← Back to Movies</button>
                 <div class="movie-player-container">
-                    
-                    <!-- Video Player -->
-                    <div class="video-wrapper" id="videoWrapper">
+                    <div class="video-wrapper">
                         <video id="movieVideo" controls autoplay style="width:100%;height:100%;">
                             <source id="videoSource" src="" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    
-                    <!-- Movie Info -->
                     <div class="player-movie-info" id="playerMovieInfo">
                         <h2 class="player-movie-title" id="playerTitle">Movie Title</h2>
                         <p class="player-movie-meta" id="playerMeta">⭐ IMDb | Language | Quality</p>
                         <p class="player-movie-plot" id="playerPlot">Movie plot will appear here...</p>
-                        
-                        <!-- Download Links -->
                         <div class="player-downloads" id="playerDownloads"></div>
                     </div>
-                    
                 </div>
-                
-                <!-- Ad -->
                 <div class="ad-container" id="detailsAd" style="display:none;margin-top:20px;">
                     <div class="ad-label">🎯 Recommended</div>
                     <a href="https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0" target="_blank" rel="nofollow noopener">🎬 Watch Full Movie Online Free - Click Now</a>
@@ -302,8 +280,8 @@
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-grid">
-                    <div><p>Looking for the latest HD movies? Visit our <a href="#" onclick="goToPage(1)">MOBI-HUBB</a> section for daily updates.</p></div>
-                    <div><p>Designed with ❤️ by the <a href="#" onclick="goToPage(1)">MOBI-HUBB Team</a></p></div>
+                    <div><p>Looking for the latest HD movies? Visit our <a href="#" onclick="goHome()">MOBI-HUBB</a> section for daily updates.</p></div>
+                    <div><p>Designed with ❤️ by the <a href="#" onclick="goHome()">MOBI-HUBB Team</a></p></div>
                     <div><p>🛡️ <a href="#">Privacy Policy</a> | 📄 <a href="#">Terms &amp; Conditions</a></p></div>
                 </div>
             </div>
@@ -344,9 +322,9 @@
 
     <script>
         // ============================================================
-        // 🎬 MOVIE DATABASE WITH VIDEO LINKS (Real Playable Movies)
+        // 🎬 MOVIE DATABASE - 13 BASE MOVIES WITH VIDEO LINKS
         // ============================================================
-        const movies = [
+        const baseMovies = [
             {
                 id: 1,
                 title: "Mario (2025) - Full Movie",
@@ -359,7 +337,7 @@
                 releaseDate: "2025",
                 imdb: "7.8/10",
                 cast: ["Anya Taylor-Joy", "Charlie Day", "Chris Pratt", "Jack Black", "Keegan-Michael Key"],
-                plot: "The beloved video game character comes to life in this animated adventure. Mario and Luigi go on an epic journey through the Mushroom Kingdom to save Princess Peach from Bowser.",
+                plot: "The beloved video game character comes to life in this animated adventure.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                 downloadLinks: [
                     { quality: "480p – 450MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -380,7 +358,7 @@
                 releaseDate: "2026",
                 imdb: "6.5/10",
                 cast: ["Arjun Rampal", "Diljit Dosanjh", "Geetika Vidya", "Kanwaljit Singh", "Suvinder Vicky"],
-                plot: "A historical drama set in the Punjab region. The film explores the complex social and political landscape of pre-partition India through the eyes of a young man caught between tradition and modernity.",
+                plot: "A historical drama set in the Punjab region.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                 downloadLinks: [
                     { quality: "480p – 500MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -401,7 +379,7 @@
                 releaseDate: "2026",
                 imdb: "6.2/10",
                 cast: ["Aastha Singh", "Ananya Panday", "Lakshya Lalwani", "Manish Chaudhary", "Paresh Pahuja"],
-                plot: "A romantic drama exploring the complexities of modern relationships. A young couple navigates the challenges of love, career, and family expectations in contemporary India.",
+                plot: "A romantic drama exploring modern relationships.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                 downloadLinks: [
                     { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -422,7 +400,7 @@
                 releaseDate: "2026",
                 imdb: "7.5/10",
                 cast: ["Allison Janney", "Christoph Waltz", "Jeff Bridges", "Pierre Coffin", "Trey Parker"],
-                plot: "The Minions are back in another hilarious adventure! This time they team up with monsters to save the world from an evil villain who wants to destroy all fun.",
+                plot: "The Minions are back in another hilarious adventure!",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                 downloadLinks: [
                     { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -443,7 +421,7 @@
                 releaseDate: "2026",
                 imdb: "7.8/10",
                 cast: ["Althaf Salim", "Naslen K. Gafoor", "Roshan Shanavas", "Sangeeth Prathap", "Sharafudheen"],
-                plot: "A Malayalam comedy-drama about the film industry. The film follows a group of aspiring filmmakers as they navigate the challenges of making their first movie.",
+                plot: "A Malayalam comedy-drama about the film industry.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
                 downloadLinks: [
                     { quality: "480p – 500MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -464,7 +442,7 @@
                 releaseDate: "2026",
                 imdb: "7.2/10",
                 cast: ["Kapil Sharma", "Neetu Singh", "R. Sarathkumar", "Riddhima Kapoor Sahni", "Sadia Khateeb"],
-                plot: "A heartwarming family comedy about a grandmother's wedding. When a 70-year-old widow decides to remarry, her family must come to terms with her decision and support her.",
+                plot: "A heartwarming family comedy about a grandmother's wedding.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
                 downloadLinks: [
                     { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -485,7 +463,7 @@
                 releaseDate: "2026",
                 imdb: "6.8/10",
                 cast: ["Abhiram Radhakrishnan", "Femina George", "Manikandan Achari", "Praveen TJ", "Sreenath Bhasi"],
-                plot: "A horror-comedy that will make you laugh and scream! A group of friends discover a haunted house and must survive the night while dealing with ghosts and their own fears.",
+                plot: "A horror-comedy that will make you laugh and scream!",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
                 downloadLinks: [
                     { quality: "480p – 450MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -506,7 +484,7 @@
                 releaseDate: "2026",
                 imdb: "6.2/10",
                 cast: ["Andy Richter", "Cooper Tomlinson", "Inde Navarrette", "Megan Lawless", "Michael Johnston"],
-                plot: "A psychological horror thriller exploring the dark side of obsession. A young woman becomes obsessed with a mysterious figure, leading her down a dangerous path.",
+                plot: "A psychological horror thriller exploring the dark side of obsession.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
                 downloadLinks: [
                     { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -527,7 +505,7 @@
                 releaseDate: "2026",
                 imdb: "8.1/10",
                 cast: ["Henry Cavill", "Himesh Patel", "Louis Partridge", "Millie Bobby Brown", "Sharon Duncan-Brewster"],
-                plot: "The third installment of the Enola Holmes detective series. Enola takes on her most challenging case yet, uncovering a conspiracy that threatens to change England forever.",
+                plot: "The third installment of the Enola Holmes detective series.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                 downloadLinks: [
                     { quality: "480p – 500MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -548,7 +526,7 @@
                 releaseDate: "2024",
                 imdb: "6.0/10",
                 cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
-                plot: "A romantic comedy set in the beautiful city of Paris. A young American woman moves to Paris and finds love in the most unexpected places.",
+                plot: "A romantic comedy set in the beautiful city of Paris.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                 downloadLinks: [
                     { quality: "480p – 350MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -569,7 +547,7 @@
                 releaseDate: "2026",
                 imdb: "7.0/10",
                 cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
-                plot: "The sequel to the iconic fashion industry film. A new generation of fashionistas navigates the cutthroat world of high fashion.",
+                plot: "The sequel to the iconic fashion industry film.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                 downloadLinks: [
                     { quality: "480p – 450MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -590,7 +568,7 @@
                 releaseDate: "2025",
                 imdb: "6.5/10",
                 cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
-                plot: "A crime thriller that keeps you guessing until the very end. A detective hunts down a serial killer who leaves no trace behind.",
+                plot: "A crime thriller that keeps you guessing until the very end.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                 downloadLinks: [
                     { quality: "480p – 380MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -611,7 +589,7 @@
                 releaseDate: "June 19, 2026",
                 imdb: "8.6/10",
                 cast: ["Samay Raina", "Balraj Singh Ghai", "Aashish Solanki", "Nishant Tanwar", "Yashraj Mehra"],
-                plot: "Samay Raina and the guest judges hilariously critique the untapped talents of aspiring performers in this popular comedy reality show.",
+                plot: "Samay Raina and the guest judges hilariously critique the untapped talents of aspiring performers.",
                 videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
                 downloadLinks: [
                     { quality: "480p – 350MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
@@ -623,7 +601,7 @@
         ];
 
         // ============================================================
-        // 📄 PAGINATION ENGINE - 735 PAGES = 9555 MOVIES
+        // 📄 PAGINATION ENGINE - 735 PAGES
         // ============================================================
         const MOVIES_PER_PAGE = 12;
         const TOTAL_PAGES = 735;
@@ -632,13 +610,14 @@
         let searchQuery = '';
         let currentFilter = 'all';
 
+        // Generate 9555 movies (13 x 735) with shuffling per page
         function generateAllMovies() {
             const all = [];
-            const baseMovies = [...movies];
             for (let page = 0; page < TOTAL_PAGES; page++) {
+                // Shuffle baseMovies for each page
                 const shuffled = [...baseMovies];
-                for (let i = 0; i < shuffled.length; i++) {
-                    const j = (i + page * 7) % shuffled.length;
+                for (let i = shuffled.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
                     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
                 }
                 shuffled.forEach((movie, index) => {
@@ -654,10 +633,33 @@
             return all;
         }
 
+        function getFilteredMovies() {
+            let filtered = allMoviesCache;
+            if (currentFilter === 'featured') {
+                filtered = filtered.filter(m => m.featured === true);
+            } else if (currentFilter !== 'all') {
+                filtered = filtered.filter(m => m.category === currentFilter);
+            }
+            if (searchQuery) {
+                const q = searchQuery.toLowerCase();
+                filtered = filtered.filter(m =>
+                    m.title.toLowerCase().includes(q) ||
+                    m.genres.some(g => g.toLowerCase().includes(q)) ||
+                    m.cast.some(c => c.toLowerCase().includes(q))
+                );
+            }
+            return filtered;
+        }
+
         function getPageMovies(page) {
+            const filtered = getFilteredMovies();
             const start = (page - 1) * MOVIES_PER_PAGE;
-            const end = Math.min(start + MOVIES_PER_PAGE, allMoviesCache.length);
-            return allMoviesCache.slice(start, end);
+            return filtered.slice(start, start + MOVIES_PER_PAGE);
+        }
+
+        function getTotalPages() {
+            const filtered = getFilteredMovies();
+            return Math.ceil(filtered.length / MOVIES_PER_PAGE);
         }
 
         function getPageFromURL() {
@@ -700,52 +702,61 @@
 
         function updatePagination(current) {
             const pagination = document.getElementById('pagination');
-            let html = '';
+            const total = getTotalPages();
+            const filtered = getFilteredMovies();
             const start = (current - 1) * MOVIES_PER_PAGE + 1;
-            const end = Math.min(current * MOVIES_PER_PAGE, allMoviesCache.length);
+            const end = Math.min(current * MOVIES_PER_PAGE, filtered.length);
             
-            html += `<li class="info">${start}-${end} of ${allMoviesCache.length}</li>`;
+            let html = `<li class="info">${start}-${end} of ${filtered.length}</li>`;
             
             if (current > 1) {
                 html += `<li><a class="page-numbers" onclick="goToPage(${current - 1})">‹ Prev</a></li>`;
             }
             
-            if (current <= 3) {
-                for (let i = 1; i <= Math.min(5, TOTAL_PAGES); i++) {
-                    html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
-                }
-                if (TOTAL_PAGES > 5) {
-                    html += `<li><span class="page-numbers dots">…</span></li>`;
-                    html += `<li><a class="page-numbers" onclick="goToPage(${TOTAL_PAGES})">${TOTAL_PAGES}</a></li>`;
-                }
-            } else if (current >= TOTAL_PAGES - 2) {
-                html += `<li><a class="page-numbers" onclick="goToPage(1)">1</a></li>`;
-                html += `<li><span class="page-numbers dots">…</span></li>`;
-                for (let i = TOTAL_PAGES - 4; i <= TOTAL_PAGES; i++) {
+            // Show page numbers
+            if (total <= 7) {
+                for (let i = 1; i <= total; i++) {
                     html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
                 }
             } else {
-                html += `<li><a class="page-numbers" onclick="goToPage(1)">1</a></li>`;
-                html += `<li><span class="page-numbers dots">…</span></li>`;
-                for (let i = current - 2; i <= current + 2; i++) {
-                    html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                if (current <= 3) {
+                    for (let i = 1; i <= 5; i++) {
+                        html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                    }
+                    html += `<li><span class="page-numbers dots">…</span></li>`;
+                    html += `<li><a class="page-numbers" onclick="goToPage(${total})">${total}</a></li>`;
+                } else if (current >= total - 2) {
+                    html += `<li><a class="page-numbers" onclick="goToPage(1)">1</a></li>`;
+                    html += `<li><span class="page-numbers dots">…</span></li>`;
+                    for (let i = total - 4; i <= total; i++) {
+                        html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                    }
+                } else {
+                    html += `<li><a class="page-numbers" onclick="goToPage(1)">1</a></li>`;
+                    html += `<li><span class="page-numbers dots">…</span></li>`;
+                    for (let i = current - 2; i <= current + 2; i++) {
+                        html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
+                    }
+                    html += `<li><span class="page-numbers dots">…</span></li>`;
+                    html += `<li><a class="page-numbers" onclick="goToPage(${total})">${total}</a></li>`;
                 }
-                html += `<li><span class="page-numbers dots">…</span></li>`;
-                html += `<li><a class="page-numbers" onclick="goToPage(${TOTAL_PAGES})">${TOTAL_PAGES}</a></li>`;
             }
             
-            if (current < TOTAL_PAGES) {
+            if (current < total) {
                 html += `<li><a class="page-numbers next" onclick="goToPage(${current + 1})">Next »</a></li>`;
             }
             
             pagination.innerHTML = html;
         }
 
+        // ============================================================
+        // 🔄 NAVIGATION FUNCTIONS
+        // ============================================================
         function goToPage(page) {
-            if (page < 1 || page > TOTAL_PAGES) return;
+            const total = getTotalPages();
+            if (page < 1 || page > total) return;
             currentPage = page;
-            let filteredMovies = getFilteredMovies();
-            const pageMovies = filteredMovies.slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE);
+            const pageMovies = getPageMovies(page);
             displayMovies(pageMovies);
             updatePagination(page);
             updateURL(page);
@@ -755,50 +766,53 @@
             }
         }
 
-        // ============================================================
-        // 🔍 FILTER FUNCTIONS
-        // ============================================================
-        function getFilteredMovies() {
-            let filtered = allMoviesCache;
-            if (currentFilter === 'featured') {
-                filtered = filtered.filter(m => m.featured === true);
-            } else if (currentFilter !== 'all') {
-                filtered = filtered.filter(m => m.category === currentFilter);
+        function goHome() {
+            currentFilter = 'all';
+            searchQuery = '';
+            document.getElementById('searchInput').value = '';
+            currentPage = 1;
+            const pageMovies = getPageMovies(1);
+            displayMovies(pageMovies);
+            updatePagination(1);
+            updateURL(1);
+            if (document.getElementById('moviePlayer').style.display !== 'none') {
+                closeMoviePlayer();
             }
-            if (searchQuery) {
-                filtered = filtered.filter(m =>
-                    m.title.toLowerCase().includes(searchQuery) ||
-                    m.genres.some(g => g.toLowerCase().includes(searchQuery)) ||
-                    m.cast.some(c => c.toLowerCase().includes(searchQuery))
-                );
-            }
-            return filtered;
+            // Highlight Home
+            document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+            document.getElementById('navHome').classList.add('active');
         }
 
         function filterCategory(category) {
             currentFilter = category;
             searchQuery = '';
             document.getElementById('searchInput').value = '';
-            const filtered = getFilteredMovies();
             currentPage = 1;
-            displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+            const pageMovies = getPageMovies(1);
+            displayMovies(pageMovies);
             updatePagination(1);
+            updateURL(1);
             if (document.getElementById('moviePlayer').style.display !== 'none') {
                 closeMoviePlayer();
             }
+            // Highlight category
+            document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
         }
 
         function filterFeatured() {
             currentFilter = 'featured';
             searchQuery = '';
             document.getElementById('searchInput').value = '';
-            const filtered = getFilteredMovies();
             currentPage = 1;
-            displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+            const pageMovies = getPageMovies(1);
+            displayMovies(pageMovies);
             updatePagination(1);
+            updateURL(1);
             if (document.getElementById('moviePlayer').style.display !== 'none') {
                 closeMoviePlayer();
             }
+            document.querySelectorAll('.nav-menu a').forEach(a => a.classList.remove('active'));
+            document.getElementById('navFeatured').classList.add('active');
         }
 
         // ============================================================
@@ -809,93 +823,68 @@
             searchQuery = query;
             if (!query) {
                 currentFilter = 'all';
-                const filtered = getFilteredMovies();
                 currentPage = 1;
-                displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+                const pageMovies = getPageMovies(1);
+                displayMovies(pageMovies);
                 updatePagination(1);
+                updateURL(1);
                 return;
             }
-            const filtered = getFilteredMovies();
             currentPage = 1;
-            displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
-            const totalPages = Math.ceil(filtered.length / MOVIES_PER_PAGE);
-            let html = `<li class="info">1-${Math.min(MOVIES_PER_PAGE, filtered.length)} of ${filtered.length}</li>`;
-            if (totalPages > 1) {
-                for (let i = 1; i <= Math.min(totalPages, 5); i++) {
-                    html += `<li><a class="page-numbers" onclick="loadSearchPage(${i})">${i}</a></li>`;
-                }
-                if (totalPages > 5) html += `<li><span class="page-numbers dots">…</span></li>`;
-            }
-            document.getElementById('pagination').innerHTML = html;
-            if (filtered.length === 0) {
-                document.getElementById('movieGrid').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:50px;color:#888;"><h3>No movies found for "${query}"</h3></div>`;
-            }
+            const pageMovies = getPageMovies(1);
+            displayMovies(pageMovies);
+            updatePagination(1);
+            updateURL(1);
             if (document.getElementById('moviePlayer').style.display !== 'none') {
                 closeMoviePlayer();
             }
         }
 
-        function loadSearchPage(page) {
-            const filtered = getFilteredMovies();
-            const start = (page - 1) * MOVIES_PER_PAGE;
-            displayMovies(filtered.slice(start, start + MOVIES_PER_PAGE));
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
         // ============================================================
-        // 🎬 PLAY MOVIE - REAL VIDEO PLAYER
+        // 🎬 PLAY MOVIE
         // ============================================================
         function playMovie(movieId) {
             const movie = allMoviesCache.find(m => m.id === movieId);
             if (!movie) return;
 
-            // Hide grid, show player
             document.querySelector('main').style.display = 'none';
             document.getElementById('moviePlayer').style.display = 'block';
             document.getElementById('detailsAd').style.display = 'block';
 
-            // Set video source
             const video = document.getElementById('movieVideo');
             const source = document.getElementById('videoSource');
             source.src = movie.videoUrl;
             video.load();
             video.play();
 
-            // Set movie info
             document.getElementById('playerTitle').textContent = movie.title;
             document.getElementById('playerMeta').textContent = `⭐ ${movie.imdb} IMDb | ${movie.language} | ${movie.quality}`;
             document.getElementById('playerPlot').textContent = movie.plot;
 
-            // Set download links
             const downloadsContainer = document.getElementById('playerDownloads');
             downloadsContainer.innerHTML = movie.downloadLinks.map(link => 
                 `<a href="${link.link}" class="player-download-btn" download>📥 ${link.quality}</a>`
             ).join('');
 
-            // Scroll to player
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         function closeMoviePlayer() {
-            // Stop video
             const video = document.getElementById('movieVideo');
             video.pause();
             video.currentTime = 0;
-            
             document.querySelector('main').style.display = 'block';
             document.getElementById('moviePlayer').style.display = 'none';
             document.getElementById('detailsAd').style.display = 'none';
-            
             // Refresh current page
-            const filtered = getFilteredMovies();
-            const pageMovies = filtered.slice((currentPage - 1) * MOVIES_PER_PAGE, currentPage * MOVIES_PER_PAGE);
+            const pageMovies = getPageMovies(currentPage);
             displayMovies(pageMovies);
             updatePagination(currentPage);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // ============================================================
-        // 📋 SHARE FUNCTIONS
+        // 📋 SHARE
         // ============================================================
         function shareFacebook() { window.open('https://www.facebook.com/sharer/sharer.php?u=https://mobihubb.pages.dev', '_blank'); }
         function shareTwitter() { window.open('https://twitter.com/intent/tweet?url=https://mobihubb.pages.dev&text=MOBI-HUBB - Watch HD Movies Free', '_blank'); }
@@ -937,10 +926,10 @@
             allMoviesCache = generateAllMovies();
             const page = getPageFromURL();
             currentPage = page;
-            const filtered = getFilteredMovies();
-            const pageMovies = filtered.slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE);
+            const pageMovies = getPageMovies(page);
             displayMovies(pageMovies);
             updatePagination(page);
+            updateURL(page);
 
             document.getElementById('searchInput').addEventListener('keyup', function(e) {
                 if (e.key === 'Enter') searchMovies();
@@ -949,8 +938,7 @@
             window.addEventListener('popstate', function(e) {
                 const page = getPageFromURL();
                 currentPage = page;
-                const filtered = getFilteredMovies();
-                const pageMovies = filtered.slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE);
+                const pageMovies = getPageMovies(page);
                 displayMovies(pageMovies);
                 updatePagination(page);
                 if (document.getElementById('moviePlayer').style.display !== 'none') {
@@ -964,6 +952,13 @@
                     scrollBtn.classList.add('show');
                 } else {
                     scrollBtn.classList.remove('show');
+                }
+            });
+
+            // Close dropdowns on outside click
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
                 }
             });
 
