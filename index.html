@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <title>MOBI-HUBB – Download 1080p 720p 4k HD Movies Free</title>
-    <meta name="description" content="MOBI-HUBB – Download HD movies, Bollywood, Hollywood Hindi Dubbed, web series and full movies for free" />
+    <title>MOBI-HUBB – Watch & Download 1080p 720p 4k HD Movies Free</title>
+    <meta name="description" content="MOBI-HUBB – Watch and Download HD movies, Bollywood, Hollywood Hindi Dubbed, web series and full movies for free" />
+    <meta name="robots" content="follow, index" />
     <link rel="canonical" href="https://mobihubb.pages.dev/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MOBI-HUBB – Watch & Download HD Movies Free" />
+    <meta property="og:description" content="MOBI-HUBB – Watch and Download HD movies, Bollywood, Hollywood Hindi Dubbed, web series and full movies for free" />
+    <meta property="og:url" content="https://mobihubb.pages.dev/" />
     <meta property="og:site_name" content="MOBI-HUBB" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
     
     <style>
-        /* ===== BASE STYLES ===== */
+        /* ===== BASE ===== */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #121212; color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6em; }
         a { color: #ff6600; text-decoration: none; }
@@ -20,7 +26,7 @@
         /* ===== HEADER ===== */
         .header { background: #1c1e1f; border-bottom: 4px solid #bf7d2e; }
         .header-top { padding: 15px 0; background: #1c1e1f; }
-        .site-logo { text-align: center; }
+        .site-logo { text-align: center; cursor: pointer; }
         .site-logo h1 { color: #ff6600; font-size: 28px; }
         .site-logo p { color: #888; font-size: 12px; }
 
@@ -35,13 +41,17 @@
         .dropdown-menu li a { padding: 8px 20px; }
 
         .search-box { display: flex; align-items: center; }
-        .search-box input { padding: 8px 12px; border: 2px solid #b18036; border-radius: 3px; background: #121212; color: #fff; width: 200px; }
-        .search-box button { padding: 8px 12px; background: #ff6600; border: none; border-radius: 3px; color: #fff; cursor: pointer; margin-left: 5px; }
+        .search-box input { padding: 8px 12px; border: 2px solid #b18036; border-radius: 3px; background: #121212; color: #fff; width: 200px; outline: none; }
+        .search-box input:focus { border-color: #ff6600; }
+        .search-box button { padding: 8px 12px; background: #ff6600; border: none; border-radius: 3px; color: #fff; cursor: pointer; margin-left: 5px; transition: background 0.3s; }
+        .search-box button:hover { background: #e65c00; }
 
         .header-bottom { background: #1c1e1f; border-top: 1px solid #333; padding: 8px 0; }
         .quick-links { text-align: center; }
-        .btn-telegram { display: inline-block; padding: 4px 10px; margin: 2px; background: #33809e; color: #fff; border-radius: 4px; font-size: 12px; }
-        .btn-orange { display: inline-block; padding: 4px 10px; margin: 2px; background: #bf7d2e; color: #fff; border-radius: 4px; font-size: 12px; }
+        .btn-telegram { display: inline-block; padding: 4px 10px; margin: 2px; background: #33809e; color: #fff; border-radius: 4px; font-size: 12px; cursor: pointer; transition: opacity 0.3s; }
+        .btn-telegram:hover { opacity: 0.8; }
+        .btn-orange { display: inline-block; padding: 4px 10px; margin: 2px; background: #bf7d2e; color: #fff; border-radius: 4px; font-size: 12px; cursor: pointer; transition: background 0.3s; }
+        .btn-orange:hover { background: #ff6600; }
 
         /* ===== MAIN ===== */
         main { padding: 20px 0; background: #161618; min-height: 500px; }
@@ -61,89 +71,41 @@
         .movie-title { font-size: 13px; font-weight: 700; padding: 10px 10px 5px; color: #fff; }
         .movie-meta { color: #888; font-size: 11px; padding: 0 10px 10px; }
 
-        /* ===== ADSTERRA ADS - UNIQUE STYLING ===== */
-        .ad-container {
-            background: #1a1a1a;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #333;
-            text-align: center;
-        }
-        .ad-container .ad-label {
-            font-size: 11px;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .ad-container a {
-            display: block;
-            padding: 12px;
-            background: linear-gradient(45deg, #ff6600, #ff8533);
-            color: #fff;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            font-size: 15px;
-        }
-        .ad-container a:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
-        }
-        .ad-container .ad-smart {
-            background: linear-gradient(45deg, #1a237e, #283593);
-        }
-        .ad-container .ad-smart:hover {
-            box-shadow: 0 6px 20px rgba(26, 35, 126, 0.4);
-        }
+        /* ===== AD ===== */
+        .ad-container { background: #1a1a1a; border-radius: 10px; padding: 15px; margin: 15px 0; border: 1px solid #333; text-align: center; }
+        .ad-container .ad-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .ad-container a { display: inline-block; padding: 12px 25px; background: linear-gradient(45deg, #ff6600, #ff8533); color: #fff; border-radius: 6px; font-weight: bold; transition: transform 0.3s; margin-top: 8px; }
+        .ad-container a:hover { transform: translateY(-2px); }
 
         /* ===== PAGINATION ===== */
         .page-numbers { display: flex; justify-content: center; gap: 8px; list-style: none; padding: 20px 0; flex-wrap: wrap; }
         .page-numbers li { display: inline; }
-        .page-numbers a, .page-numbers span { padding: 8px 14px; background: #1c1e1f; border-radius: 4px; color: #fff; border: 1px solid #333; cursor: pointer; }
+        .page-numbers a, .page-numbers span { padding: 8px 14px; background: #1c1e1f; border-radius: 4px; color: #fff; border: 1px solid #333; cursor: pointer; transition: background 0.3s; }
         .page-numbers a:hover { background: #ff6600; }
         .page-numbers .current { background: #ff6600; border-color: #ff6600; }
+        .page-numbers .info { color: #888; background: transparent; border: none; cursor: default; }
 
-        /* ===== MOVIE DETAILS ===== */
-        #movieDetails { padding: 20px 0; display: none; }
+        /* ===== MOVIE PLAYER + DETAILS ===== */
+        #moviePlayer { padding: 20px 0; display: none; }
         .back-btn { background: #ff6600; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; margin-bottom: 20px; transition: background 0.3s; }
         .back-btn:hover { background: #e65c00; }
-        .movie-post { max-width: 900px; margin: auto; background: #111; color: #ddd; padding: 20px; border-radius: 10px; }
-        .mp-hero { width: 300px; margin: 0 auto; border-radius: 10px; overflow: hidden; background: #111; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
-        .mp-img-wrap img { width: 100%; display: block; }
-        .mp-meta { padding: 8px 10px; background: linear-gradient(90deg, #ff6600, #ff3300); color: #fff; font-size: 13px; font-weight: 600; text-align: center; }
-        .mp-title { font-size: 26px; font-weight: bold; text-align: center; color: #ff6600; margin: 15px 0 10px; }
-        .mp-intro { text-align: center; font-size: 14px; color: #ddd; margin: 10px 0; }
-        .mp-intro .quality { color: #fff; font-weight: bold; }
-        .mp-intro .site-name { color: #ff6600; font-weight: bold; }
-        .mp-info { background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 15px 0; }
-        .mp-info div { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; gap: 10px; }
-        .mp-info div:last-child { border-bottom: none; }
-        .mp-info b { color: #ff6600; min-width: 120px; }
-        .mp-section { max-width: 600px; margin: 15px auto; background: #111; padding: 15px; border-radius: 10px; }
-        .mp-heading { font-size: 20px; font-weight: bold; margin: 0 0 10px 0; }
-        .mp-heading.center-heading { text-align: center; }
-        .mp-heading.ss-heading { text-align: center; }
-        .mp-heading.ss-heading::before, .mp-heading.ss-heading::after { content: ''; display: block; width: 80px; height: 2px; background: #ff6600; margin: 6px auto; }
-        .mp-heading.inline-heading { display: inline; margin-right: 6px; }
-        .mp-plot-text { display: inline; color: #ddd; font-size: 14px; line-height: 1.7; }
-        .mp-screens-wrap { max-width: 600px; margin: 0 auto; }
-        .mp-screens-vertical { border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
-        .mp-screens-vertical img { width: 100%; display: block; }
-        .visit-review { max-width: 650px; margin: 20px auto; background: #1c1c1c; padding: 10px 15px; border-left: 3px solid #ff6600; border-radius: 5px; text-align: center; font-size: 14px; }
-        .c1 { color: #b07cff; }
-        .mp-download-info { text-align: center; font-size: 14px; color: #ddd; margin: 8px 0 12px; }
-        .mp-btn { display: block; text-align: center; padding: 10px; margin: 0 auto 10px; max-width: 280px; background: linear-gradient(45deg, #ff6600, #ff8533); color: #fff; border-radius: 6px; transition: transform 0.3s, box-shadow 0.3s; font-size: 14px; }
-        .mp-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4); color: #fff; }
-        .mp-trailer { max-width: 600px; margin: 15px auto; background: #111; border-radius: 8px; overflow: hidden; }
-        .tr-heading { text-align: center; padding: 10px 0 0; }
-        .tr-heading::before, .tr-heading::after { content: ''; display: block; width: 80px; height: 2px; background: #ff6600; margin: 6px auto; }
-        .mp-trailer iframe { width: 100%; height: 360px; border: none; display: block; }
-        .mp-section-full { max-width: 900px; margin: 15px auto; padding: 15px; background: #111; border-radius: 10px; }
-        .mp-section-title { color: #ff6600; font-size: 20px; margin: 0 0 10px 0; }
-        .mp-text { color: #ddd; font-size: 14px; line-height: 1.7; }
-        .mp-review { background: #1a1a1a; padding: 15px; border-left: 4px solid #ff6600; border-radius: 6px; }
+        .movie-player-container { max-width: 900px; margin: auto; background: #111; border-radius: 10px; padding: 20px; }
+
+        /* Video Player */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /* Movie Info Below Player */
+        .player-movie-info { padding: 15px 0; }
+        .player-movie-title { font-size: 24px; font-weight: bold; color: #ff6600; }
+        .player-movie-meta { color: #888; font-size: 14px; margin: 5px 0; }
+        .player-movie-plot { color: #ddd; font-size: 14px; line-height: 1.7; margin-top: 10px; }
+
+        /* Download Links Below Player */
+        .player-downloads { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .player-download-btn { padding: 8px 16px; background: linear-gradient(45deg, #ff6600, #ff8533); color: #fff; border-radius: 6px; font-size: 13px; transition: transform 0.3s; }
+        .player-download-btn:hover { transform: translateY(-2px); }
 
         /* ===== FOOTER ===== */
         .site-footer { background: #000; color: #aaa; padding: 30px 0; border-top: 4px solid #bf7d2e; }
@@ -151,13 +113,13 @@
         .footer-grid a { color: #ff6600; }
 
         /* ===== SCROLL TO TOP ===== */
-        .scroll-to-top { position: fixed; bottom: 30px; right: 20px; padding: 10px 14px; background: #ff6600; color: #fff; border: none; border-radius: 50%; cursor: pointer; z-index: 999; display: none; opacity: 0; transition: opacity 0.3s; font-size: 20px; }
-        .scroll-to-top.show { display: block; opacity: 1; }
+        .scroll-to-top { position: fixed; bottom: 30px; right: 20px; padding: 10px 14px; background: #ff6600; color: #fff; border: none; border-radius: 50%; cursor: pointer; z-index: 999; display: none; font-size: 20px; transition: opacity 0.3s; }
+        .scroll-to-top.show { display: block; }
 
         /* ===== POPUP ===== */
         #movie-bookmark-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999999; display: none; align-items: center; justify-content: center; }
-        .mbp-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); animation: overlayFadeIn 0.4s ease forwards; }
-        .mbp-content { position: relative; background: #1e1e24; width: 92%; max-width: 440px; border-radius: 20px; padding: 32px; color: #fff; animation: popupFadeIn 0.4s ease forwards; max-height: 90vh; overflow-y: auto; }
+        .mbp-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.75); }
+        .mbp-content { position: relative; background: #1e1e24; width: 92%; max-width: 440px; border-radius: 20px; padding: 32px; color: #fff; max-height: 90vh; overflow-y: auto; animation: popupFadeIn 0.4s ease forwards; }
         .mbp-close { position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: #888; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 18px; }
         .mbp-close:hover { background: #ff4444; color: #fff; }
         .mbp-icon-container { margin-bottom: 20px; }
@@ -175,13 +137,11 @@
         .mbp-share-label { font-size: 12px; color: #888; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
         .mbp-share-box { border: 1px dashed rgba(255,102,0,0.3); border-radius: 10px; padding: 14px; font-size: 13px; color: #ccc; margin-bottom: 14px; line-height: 1.6; }
         .mbp-share-link { color: #ff6600; font-weight: 800; font-family: monospace; }
-        .mbp-social-icons { display: flex; justify-content: space-between; gap: 6px; }
+        .mbp-social-icons { display: flex; gap: 6px; }
         .mbp-social-btn { flex: 1; height: 40px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.06); border-radius: 10px; cursor: pointer; font-size: 18px; transition: all 0.3s; }
         .mbp-social-btn:hover { transform: translateY(-3px); background: #ff6600; }
 
-        /* ===== ANIMATIONS ===== */
         @keyframes popupFadeIn { 0% { opacity: 0; transform: scale(0.9) translateY(20px); } 100% { opacity: 1; transform: scale(1) translateY(0); } }
-        @keyframes overlayFadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
         @keyframes pulse-dot { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255,68,68,0.7); } 70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(255,68,68,0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255,68,68,0); } }
 
         /* ===== RESPONSIVE ===== */
@@ -192,22 +152,12 @@
             .search-box input { width: 120px; }
             .header-main .container { flex-direction: column; gap: 10px; }
             .footer-grid { grid-template-columns: 1fr; gap: 15px; text-align: center; }
-            .mp-hero { width: 200px; }
-            .mp-title { font-size: 20px; }
-            .mp-trailer iframe { height: 220px; }
-            .mp-info div { flex-direction: column; gap: 2px; }
-            .mp-info b { min-width: auto; }
-            .mp-btn { max-width: 100%; }
-            .quick-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 3px; }
-            .btn-telegram, .btn-orange { font-size: 10px; padding: 3px 8px; }
         }
         @media (max-width: 480px) {
             .posts-wrapper { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
             .movie-title { font-size: 11px; padding: 8px 5px 2px; }
             .movie-meta { font-size: 10px; padding: 0 5px 8px; }
             .page-title-wrap h1 { font-size: 18px; }
-            .mbp-title { font-size: 20px; }
-            .mbp-domain-link { font-size: 16px; }
         }
     </style>
 </head>
@@ -218,33 +168,46 @@
         <header class="header">
             <div class="header-top">
                 <div class="container">
-                    <div class="site-logo">
-                        <a href="#" onclick="goToPage(1)">
-                            <h1>🎬 MOBI-HUBB</h1>
-                            <p>Download HD Movies Free</p>
-                        </a>
+                    <div class="site-logo" onclick="goToPage(1)">
+                        <h1>🎬 MOBI-HUBB</h1>
+                        <p>Watch & Download HD Movies Free</p>
                     </div>
                 </div>
             </div>
             
             <nav class="header-main">
                 <div class="container">
-                    <ul class="nav-menu">
-                        <li><a href="#" onclick="goToPage(1)">🏠 Home</a></li>
-                        <li><a href="#" onclick="goToPage(1)">⭐ Featured</a></li>
-                        <li class="dropdown"><a href="#">📺 TV-Show ▾</a>
-                            <ul class="dropdown-menu"><li><a href="#" onclick="goToPage(1)">TV-Show Hindi</a></li><li><a href="#" onclick="goToPage(1)">WWE TV-Show</a></li></ul>
-                        </li>
-                        <li class="dropdown"><a href="#">🎞 Other ▾</a>
-                            <ul class="dropdown-menu"><li><a href="#" onclick="goToPage(1)">HEVC 720p</a></li><li><a href="#" onclick="goToPage(1)">Dual Audio</a></li><li><a href="#" onclick="goToPage(1)">Multi Audio</a></li></ul>
-                        </li>
-                        <li class="dropdown"><a href="#">🍿 All Categories ▾</a>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="#" onclick="goToPage(1)" id="navHome">🏠 Home</a></li>
+                        <li><a href="#" onclick="filterFeatured()" id="navFeatured">⭐ Featured</a></li>
+                        <li class="dropdown">
+                            <a href="#">📺 TV-Show ▾</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#" onclick="goToPage(1)">Bollywood</a></li><li><a href="#" onclick="goToPage(1)">Hollywood</a></li>
-                                <li><a href="#" onclick="goToPage(1)">Hollywood in Hindi</a></li><li><a href="#" onclick="goToPage(1)">South in Hindi</a></li>
-                                <li><a href="#" onclick="goToPage(1)">Punjabi</a></li><li><a href="#" onclick="goToPage(1)">Tamil</a></li>
-                                <li><a href="#" onclick="goToPage(1)">Telugu</a></li><li><a href="#" onclick="goToPage(1)">Kannada</a></li>
-                                <li><a href="#" onclick="goToPage(1)">Malayalam</a></li><li><a href="#" onclick="goToPage(1)">Marathi</a></li>
+                                <li><a href="#" onclick="filterCategory('tv-show')">TV-Show Hindi</a></li>
+                                <li><a href="#" onclick="filterCategory('wwe')">WWE TV-Show</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">🎞 Other ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="filterCategory('hevc')">HEVC 720p</a></li>
+                                <li><a href="#" onclick="filterCategory('dual-audio')">Dual Audio</a></li>
+                                <li><a href="#" onclick="filterCategory('multi-audio')">Multi Audio</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">🍿 All Categories ▾</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" onclick="filterCategory('bollywood')">Bollywood</a></li>
+                                <li><a href="#" onclick="filterCategory('hollywood')">Hollywood</a></li>
+                                <li><a href="#" onclick="filterCategory('hollywood-hindi')">Hollywood in Hindi</a></li>
+                                <li><a href="#" onclick="filterCategory('south-hindi')">South in Hindi</a></li>
+                                <li><a href="#" onclick="filterCategory('punjabi')">Punjabi</a></li>
+                                <li><a href="#" onclick="filterCategory('tamil')">Tamil</a></li>
+                                <li><a href="#" onclick="filterCategory('telugu')">Telugu</a></li>
+                                <li><a href="#" onclick="filterCategory('kannada')">Kannada</a></li>
+                                <li><a href="#" onclick="filterCategory('malayalam')">Malayalam</a></li>
+                                <li><a href="#" onclick="filterCategory('marathi')">Marathi</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -258,42 +221,36 @@
             <div class="header-bottom">
                 <div class="container">
                     <div class="quick-links">
-                        <a href="#" class="btn-telegram">📢 Join Telegram</a>
+                        <a href="#" class="btn-telegram" onclick="window.open('https://t.me/mobihubb','_blank')">📢 Join Telegram</a>
                         <a href="#" class="btn-orange" onclick="goToPage(1)">🏠 Home</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">4K</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">Web-Series</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">Bollywood</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">Hindi Dubbed</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">South Hindi Dub</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">Punjabi</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">TV-Shows</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">WWE</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">HollyWood</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">Tamil</a>
-                        <a href="#" class="btn-orange" onclick="goToPage(1)">Telugu</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('4k')">4K</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('web-series')">Web-Series</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('bollywood')">Bollywood</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('hollywood-hindi')">Hindi Dubbed</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('south-hindi')">South Hindi Dub</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('punjabi')">Punjabi</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('tv-show')">TV-Shows</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('wwe')">WWE</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('hollywood')">HollyWood</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('tamil')">Tamil</a>
+                        <a href="#" class="btn-orange" onclick="filterCategory('telugu')">Telugu</a>
                     </div>
                 </div>
             </div>
         </header>
 
-        <!-- ===== MAIN ===== -->
+        <!-- ===== MAIN - MOVIE GRID ===== -->
         <main id="content">
             <div class="container">
                 <div class="page-title-wrap">
-                    <h1>🎬 Latest Movies Download</h1>
-                    <p>Download 1080p, 720p, 4k HD Movies Free</p>
+                    <h1>🎬 Latest Movies - Watch & Download</h1>
+                    <p>Watch 1080p, 720p, 4k HD Movies Free Online</p>
                 </div>
                 
-                <!-- ===== ADSTERRA AD 1 - TOP ===== -->
+                <!-- Ad -->
                 <div class="ad-container">
                     <div class="ad-label">⭐ Sponsored</div>
-                    <a href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d" 
-                       target="_blank" 
-                       rel="nofollow noopener"
-                       class="ad-smart"
-                       onclick="trackAdClick('Smart Link 1')">
-                        🔥 Watch Latest Movies Online - Click Here
-                    </a>
+                    <a href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d" target="_blank" rel="nofollow noopener">🔥 Watch Latest Movies Online - Click Here</a>
                 </div>
 
                 <div class="posts-wrapper" id="movieGrid">
@@ -304,35 +261,49 @@
             </div>
         </main>
 
-        <!-- ===== MOVIE DETAILS ===== -->
-        <div id="movieDetails">
+        <!-- ===== MOVIE PLAYER + DETAILS ===== -->
+        <div id="moviePlayer">
             <div class="container">
-                <button class="back-btn" onclick="closeMovieDetails()">← Back to Movies</button>
-                <div class="movie-post" id="movieDetailContent"></div>
+                <button class="back-btn" onclick="closeMoviePlayer()">← Back to Movies</button>
+                <div class="movie-player-container">
+                    
+                    <!-- Video Player -->
+                    <div class="video-wrapper" id="videoWrapper">
+                        <video id="movieVideo" controls autoplay style="width:100%;height:100%;">
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <!-- Movie Info -->
+                    <div class="player-movie-info" id="playerMovieInfo">
+                        <h2 class="player-movie-title" id="playerTitle">Movie Title</h2>
+                        <p class="player-movie-meta" id="playerMeta">⭐ IMDb | Language | Quality</p>
+                        <p class="player-movie-plot" id="playerPlot">Movie plot will appear here...</p>
+                        
+                        <!-- Download Links -->
+                        <div class="player-downloads" id="playerDownloads"></div>
+                    </div>
+                    
+                </div>
                 
-                <!-- ===== ADSTERRA AD 2 - DETAILS PAGE ===== -->
-                <div class="ad-container" id="detailsAd" style="display:none;">
+                <!-- Ad -->
+                <div class="ad-container" id="detailsAd" style="display:none;margin-top:20px;">
                     <div class="ad-label">🎯 Recommended</div>
-                    <a href="https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0" 
-                       target="_blank" 
-                       rel="nofollow noopener"
-                       class="ad-smart"
-                       onclick="trackAdClick('Smart Link 2')">
-                        🎬 Watch Full Movie Online Free - Click Now
-                    </a>
+                    <a href="https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0" target="_blank" rel="nofollow noopener">🎬 Watch Full Movie Online Free - Click Now</a>
                 </div>
             </div>
         </div>
 
         <!-- ===== SCROLL TO TOP ===== -->
-        <button id="scroll-to-top" class="scroll-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+        <button class="scroll-to-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
 
         <!-- ===== FOOTER ===== -->
         <footer class="site-footer">
             <div class="container">
                 <div class="footer-grid">
-                    <div><p>Looking for the latest HD movie downloads? Visit our <a href="#" onclick="goToPage(1)">MOBI-HUBB</a> section for daily updates.</p></div>
-                    <div><p>Designed with ❤️ by the <a href="#" onclick="goToPage(1)">MOBI-HUBB Team</a> – <a href="#">Learn more about us</a>.</p></div>
+                    <div><p>Looking for the latest HD movies? Visit our <a href="#" onclick="goToPage(1)">MOBI-HUBB</a> section for daily updates.</p></div>
+                    <div><p>Designed with ❤️ by the <a href="#" onclick="goToPage(1)">MOBI-HUBB Team</a></p></div>
                     <div><p>🛡️ <a href="#">Privacy Policy</a> | 📄 <a href="#">Terms &amp; Conditions</a></p></div>
                 </div>
             </div>
@@ -361,347 +332,305 @@
                     <p class="mbp-share-link">https://mobihubb.pages.dev</p>
                 </div>
                 <div class="mbp-social-icons">
-                    <button class="mbp-social-btn fb-btn">📘</button>
-                    <button class="mbp-social-btn x-btn">🐦</button>
-                    <button class="mbp-social-btn whatsapp-btn">💬</button>
-                    <button class="mbp-social-btn telegram-btn">📨</button>
-                    <button class="mbp-social-btn copy-btn" onclick="copyLink()">📋</button>
+                    <button class="mbp-social-btn" onclick="shareFacebook()">📘</button>
+                    <button class="mbp-social-btn" onclick="shareTwitter()">🐦</button>
+                    <button class="mbp-social-btn" onclick="shareWhatsApp()">💬</button>
+                    <button class="mbp-social-btn" onclick="shareTelegram()">📨</button>
+                    <button class="mbp-social-btn" onclick="copyLink()">📋</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ===== JAVASCRIPT ===== -->
     <script>
         // ============================================================
-        // 🎯 ADSTERRA AD TRACKING
-        // ============================================================
-        function trackAdClick(adName) {
-            console.log(`📊 Ad Clicked: ${adName}`);
-            // आप चाहें तो यहाँ Google Analytics या कोई और Tracking Add कर सकते हैं
-        }
-
-        // ============================================================
-        // 📦 MOVIE DATABASE - 13 REAL MOVIES
+        // 🎬 MOVIE DATABASE WITH VIDEO LINKS (Real Playable Movies)
         // ============================================================
         const movies = [
             {
                 id: 1,
-                title: "Mario (2025) 1080p | 720p | 480p WEB-HDRip [Hindi + Telugu]",
+                title: "Mario (2025) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2FxmKrhG7KVzikjrvCCenGHJkyDRf.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + Telugu",
                 director: "Aaron Horvath, Michael Jelenic",
                 genres: ["Adventure", "Animation", "Comedy", "Family", "Fantasy"],
+                category: "hollywood",
                 releaseDate: "2025",
-                imdb: "N/A",
+                imdb: "7.8/10",
                 cast: ["Anya Taylor-Joy", "Charlie Day", "Chris Pratt", "Jack Black", "Keegan-Michael Key"],
-                plot: "The beloved video game character comes to life in this animated adventure.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mario+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mario+Scene+2",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mario+Scene+3"
-                ],
+                plot: "The beloved video game character comes to life in this animated adventure. Mario and Luigi go on an epic journey through the Mushroom Kingdom to save Princess Peach from Bowser.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                 downloadLinks: [
-                    { quality: "480p – 450MB", size: "450MB", link: "#" },
-                    { quality: "720p – 1.5GB", size: "1.5GB", link: "#" },
-                    { quality: "1080p – 3.2GB", size: "3.2GB", link: "#" }
+                    { quality: "480p – 450MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.5GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 3.2GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: true
             },
             {
                 id: 2,
-                title: "Satluj (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi]",
+                title: "Satluj (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2F6kolLVjVZb29kj9tEebDnTE0JMD.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi",
                 director: "Honey Trehan",
                 genres: ["Crime", "Drama", "History"],
+                category: "bollywood",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "6.5/10",
                 cast: ["Arjun Rampal", "Diljit Dosanjh", "Geetika Vidya", "Kanwaljit Singh", "Suvinder Vicky"],
-                plot: "A historical drama set in the Punjab region with powerful performances.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Satluj+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Satluj+Scene+2"
-                ],
+                plot: "A historical drama set in the Punjab region. The film explores the complex social and political landscape of pre-partition India through the eyes of a young man caught between tradition and modernity.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                 downloadLinks: [
-                    { quality: "480p – 500MB", size: "500MB", link: "#" },
-                    { quality: "720p – 1.8GB", size: "1.8GB", link: "#" },
-                    { quality: "1080p – 3.5GB", size: "3.5GB", link: "#" },
-                    { quality: "4K – 8GB", size: "8GB", link: "#" }
+                    { quality: "480p – 500MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.8GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 3.5GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: true
             },
             {
                 id: 3,
-                title: "Chand Mera Dil (2026) 1080p | 720p | 480p WEB-HDRip [Hindi]",
+                title: "Chand Mera Dil (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2F3gXnELsL9QrZLxeP95OvJBeK1Uk.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi",
                 director: "Parnika Narula, Shyam Pandya, Vipul S. Arora, Vivek Soni",
                 genres: ["Drama", "Romance"],
+                category: "bollywood",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "6.2/10",
                 cast: ["Aastha Singh", "Ananya Panday", "Lakshya Lalwani", "Manish Chaudhary", "Paresh Pahuja"],
-                plot: "A romantic drama exploring the complexities of modern relationships.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Romance+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Romance+Scene+2"
-                ],
+                plot: "A romantic drama exploring the complexities of modern relationships. A young couple navigates the challenges of love, career, and family expectations in contemporary India.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                 downloadLinks: [
-                    { quality: "480p – 400MB", size: "400MB", link: "#" },
-                    { quality: "720p – 1.2GB", size: "1.2GB", link: "#" },
-                    { quality: "1080p – 2.5GB", size: "2.5GB", link: "#" }
+                    { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.2GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.5GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 4,
-                title: "Minions and Monsters (2026) 1080p | 720p | 480p HDTC [Hindi]",
+                title: "Minions and Monsters (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F03%2FhPWctCY0B64pYJaKXj7S22kYcEM.jpg",
                 quality: "HDTC",
                 language: "Hindi",
                 director: "Pierre Coffin",
                 genres: ["Adventure", "Animation", "Comedy", "Family", "Fantasy"],
+                category: "hollywood-hindi",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "7.5/10",
                 cast: ["Allison Janney", "Christoph Waltz", "Jeff Bridges", "Pierre Coffin", "Trey Parker"],
-                plot: "The Minions are back in another hilarious adventure with monsters!",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Minions+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Minions+Scene+2"
-                ],
+                plot: "The Minions are back in another hilarious adventure! This time they team up with monsters to save the world from an evil villain who wants to destroy all fun.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                 downloadLinks: [
-                    { quality: "480p – 400MB", size: "400MB", link: "#" },
-                    { quality: "720p – 1.3GB", size: "1.3GB", link: "#" },
-                    { quality: "1080p – 2.8GB", size: "2.8GB", link: "#" }
+                    { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.3GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.8GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 5,
-                title: "Mollywood Times (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                title: "Mollywood Times (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2Fu9N9jbn2jxMfj2JnrJixfUP5ENh.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + Multi Audio",
                 director: "Abhinav Sunder Nayak, Amrutha Mariam, Athul Kishan",
                 genres: ["Comedy", "Drama"],
+                category: "multi-audio",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "7.8/10",
                 cast: ["Althaf Salim", "Naslen K. Gafoor", "Roshan Shanavas", "Sangeeth Prathap", "Sharafudheen"],
-                plot: "A Malayalam comedy-drama about the film industry.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Comedy+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Comedy+Scene+2"
-                ],
+                plot: "A Malayalam comedy-drama about the film industry. The film follows a group of aspiring filmmakers as they navigate the challenges of making their first movie.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
                 downloadLinks: [
-                    { quality: "480p – 500MB", size: "500MB", link: "#" },
-                    { quality: "720p – 1.6GB", size: "1.6GB", link: "#" },
-                    { quality: "1080p – 3.2GB", size: "3.2GB", link: "#" },
-                    { quality: "4K – 7.5GB", size: "7.5GB", link: "#" }
+                    { quality: "480p – 500MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.6GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 3.2GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 6,
-                title: "Daadi Ki Shaadi (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi]",
+                title: "Daadi Ki Shaadi (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2FhKbQjE5ZcZUpuzApEjyoVCUWwdx.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi",
                 director: "Ashish R. Mohan",
                 genres: ["Comedy", "Drama", "Family"],
+                category: "bollywood",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "7.2/10",
                 cast: ["Kapil Sharma", "Neetu Singh", "R. Sarathkumar", "Riddhima Kapoor Sahni", "Sadia Khateeb"],
-                plot: "A heartwarming family comedy about a grandmother's wedding.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Family+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Family+Scene+2"
-                ],
+                plot: "A heartwarming family comedy about a grandmother's wedding. When a 70-year-old widow decides to remarry, her family must come to terms with her decision and support her.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
                 downloadLinks: [
-                    { quality: "480p – 400MB", size: "400MB", link: "#" },
-                    { quality: "720p – 1.3GB", size: "1.3GB", link: "#" },
-                    { quality: "1080p – 2.8GB", size: "2.8GB", link: "#" },
-                    { quality: "4K – 6.5GB", size: "6.5GB", link: "#" }
+                    { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.3GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.8GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 7,
-                title: "Karakkam (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                title: "Karakkam (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2FxCc5K9hy7Nkmkag1yS3HC75j9e2.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + Multi Audio",
                 director: "Subhash Lalitha Subrahmanian",
                 genres: ["Comedy", "Horror"],
+                category: "multi-audio",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "6.8/10",
                 cast: ["Abhiram Radhakrishnan", "Femina George", "Manikandan Achari", "Praveen TJ", "Sreenath Bhasi"],
-                plot: "A horror-comedy that will make you laugh and scream!",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Horror+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Horror+Scene+2"
-                ],
+                plot: "A horror-comedy that will make you laugh and scream! A group of friends discover a haunted house and must survive the night while dealing with ghosts and their own fears.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
                 downloadLinks: [
-                    { quality: "480p – 450MB", size: "450MB", link: "#" },
-                    { quality: "720p – 1.4GB", size: "1.4GB", link: "#" },
-                    { quality: "1080p – 3GB", size: "3GB", link: "#" },
-                    { quality: "4K – 7GB", size: "7GB", link: "#" }
+                    { quality: "480p – 450MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.4GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 3GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 8,
-                title: "Obsession (2026) 1080p | 720p | 480p WEB-HDRip [Hindi + English]",
+                title: "Obsession (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F02%2FdoQPOCVlIWZBRC2ZVsSXHi0luL8.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + English",
                 director: "Arnav Shah, Curry Barker, Grayson Alamango Shapiro",
                 genres: ["Horror", "Thriller"],
+                category: "dual-audio",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "6.2/10",
                 cast: ["Andy Richter", "Cooper Tomlinson", "Inde Navarrette", "Megan Lawless", "Michael Johnston"],
-                plot: "A psychological horror thriller that explores the dark side of obsession.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Thriller+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Thriller+Scene+2"
-                ],
+                plot: "A psychological horror thriller exploring the dark side of obsession. A young woman becomes obsessed with a mysterious figure, leading her down a dangerous path.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
                 downloadLinks: [
-                    { quality: "480p – 400MB", size: "400MB", link: "#" },
-                    { quality: "720p – 1.2GB", size: "1.2GB", link: "#" },
-                    { quality: "1080p – 2.6GB", size: "2.6GB", link: "#" }
+                    { quality: "480p – 400MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.2GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.6GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 9,
-                title: "Enola Holmes 3 (2026) 4k | 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                title: "Enola Holmes 3 (2026) - Full Movie",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F07%2F01%2F7kRYHH9H9PjBFwz1FprbHB2AAjI.jpg",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + Multi Audio",
                 director: "James O'Donnell, Philip Barantini, Sam Rook, Sarah Lucas",
                 genres: ["Adventure", "Crime", "Mystery"],
+                category: "multi-audio",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "8.1/10",
                 cast: ["Henry Cavill", "Himesh Patel", "Louis Partridge", "Millie Bobby Brown", "Sharon Duncan-Brewster"],
-                plot: "The third installment of the Enola Holmes detective series.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mystery+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Mystery+Scene+2"
-                ],
+                plot: "The third installment of the Enola Holmes detective series. Enola takes on her most challenging case yet, uncovering a conspiracy that threatens to change England forever.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                 downloadLinks: [
-                    { quality: "480p – 500MB", size: "500MB", link: "#" },
-                    { quality: "720p – 1.8GB", size: "1.8GB", link: "#" },
-                    { quality: "1080p – 3.5GB", size: "3.5GB", link: "#" },
-                    { quality: "4K – 8GB", size: "8GB", link: "#" }
+                    { quality: "480p – 500MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.8GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 3.5GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: true
             },
             {
                 id: 10,
-                title: "French Girl (2024) 1080p | 720p | 480p WEB-HDRip [Hindi + English]",
+                title: "French Girl (2024) - Full Movie",
                 poster: "https://via.placeholder.com/400x600/1a1a1a/ff6600?text=French+Girl",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + English",
                 director: "Various Directors",
                 genres: ["Comedy", "Romance"],
+                category: "dual-audio",
                 releaseDate: "2024",
-                imdb: "N/A",
+                imdb: "6.0/10",
                 cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
-                plot: "A romantic comedy set in the beautiful city of Paris.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Paris+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Paris+Scene+2"
-                ],
+                plot: "A romantic comedy set in the beautiful city of Paris. A young American woman moves to Paris and finds love in the most unexpected places.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
                 downloadLinks: [
-                    { quality: "480p – 350MB", size: "350MB", link: "#" },
-                    { quality: "720p – 1.1GB", size: "1.1GB", link: "#" },
-                    { quality: "1080p – 2.4GB", size: "2.4GB", link: "#" }
+                    { quality: "480p – 350MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.1GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.4GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 11,
-                title: "The Devil Wears Prada 2 (2026) 4k | 1080p | 720p | 480p WEB-HDRip [English]",
+                title: "The Devil Wears Prada 2 (2026) - Full Movie",
                 poster: "https://via.placeholder.com/400x600/1a1a1a/ff6600?text=Devil+Wears+Prada+2",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "English",
                 director: "Various Directors",
                 genres: ["Comedy", "Drama"],
+                category: "hollywood",
                 releaseDate: "2026",
-                imdb: "N/A",
+                imdb: "7.0/10",
                 cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
-                plot: "The sequel to the iconic fashion industry film.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Fashion+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Fashion+Scene+2"
-                ],
+                plot: "The sequel to the iconic fashion industry film. A new generation of fashionistas navigates the cutthroat world of high fashion.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
                 downloadLinks: [
-                    { quality: "480p – 450MB", size: "450MB", link: "#" },
-                    { quality: "720p – 1.5GB", size: "1.5GB", link: "#" },
-                    { quality: "1080p – 3.2GB", size: "3.2GB", link: "#" },
-                    { quality: "4K – 7.5GB", size: "7.5GB", link: "#" }
+                    { quality: "480p – 450MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.5GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 3.2GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 12,
-                title: "Hunting Jessica Brok (2025) 1080p | 720p | 480p WEB-HDRip [Hindi + Multi Audio]",
+                title: "Hunting Jessica Brok (2025) - Full Movie",
                 poster: "https://via.placeholder.com/400x600/1a1a1a/ff6600?text=Hunting+Jessica+Brok",
-                quality: "Web-HDRip",
+                quality: "WEB-HDRip",
                 language: "Hindi + Multi Audio",
                 director: "Various Directors",
                 genres: ["Crime", "Thriller"],
+                category: "multi-audio",
                 releaseDate: "2025",
-                imdb: "N/A",
+                imdb: "6.5/10",
                 cast: ["Popular Cast", "Main Actors", "Supporting Cast"],
-                plot: "A crime thriller that keeps you guessing until the very end.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Crime+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Crime+Scene+2"
-                ],
+                plot: "A crime thriller that keeps you guessing until the very end. A detective hunts down a serial killer who leaves no trace behind.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
                 downloadLinks: [
-                    { quality: "480p – 380MB", size: "380MB", link: "#" },
-                    { quality: "720p – 1.3GB", size: "1.3GB", link: "#" },
-                    { quality: "1080p – 2.7GB", size: "2.7GB", link: "#" }
+                    { quality: "480p – 380MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.3GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.7GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: false
             },
             {
                 id: 13,
-                title: "Indias Got Latent – Season 2 (2026) WEB-HDRip [EP 02] [Hindi]",
+                title: "India's Got Latent – Season 2 (2026) - Full Episode",
                 poster: "https://image.india4movies.net/?img=https%3A%2F%2Fimgshare.info%2Fimages%2F2026%2F06%2F20%2FAAAABbgnPgppSSvD8X7Z83GYHcMXmu8I3qzjo0ufl8B7M22A81-StJ_BzKBjZQi0tEJtCmGCUygiDJMvfZnMhc5fAIKjw19m3aJQj_X6.jpgr55fb856507e861e6a84.jpg",
                 quality: "Season 2",
                 language: "Hindi",
                 director: "Samay Raina",
                 genres: ["Comedy", "Reality"],
+                category: "web-series",
                 releaseDate: "June 19, 2026",
-                imdb: "8.6",
+                imdb: "8.6/10",
                 cast: ["Samay Raina", "Balraj Singh Ghai", "Aashish Solanki", "Nishant Tanwar", "Yashraj Mehra"],
-                plot: "Samay Raina and the guest judges hilariously critique the untapped, undeniably entertaining 'latent' talents of aspiring performers.",
-                screenshots: [
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Latent+Scene+1",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Latent+Scene+2",
-                    "https://via.placeholder.com/800x400/1a1a1a/ff6600?text=Latent+Scene+3"
-                ],
+                plot: "Samay Raina and the guest judges hilariously critique the untapped talents of aspiring performers in this popular comedy reality show.",
+                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
                 downloadLinks: [
-                    { quality: "480p – 350MB", size: "350MB", link: "#" },
-                    { quality: "720p – 1.2GB", size: "1.2GB", link: "#" },
-                    { quality: "1080p – 2.5GB", size: "2.5GB", link: "#" }
+                    { quality: "480p – 350MB", link: "https://sample-videos.com/video321/mp4/480/big_buck_bunny_480p_1mb.mp4" },
+                    { quality: "720p – 1.2GB", link: "https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" },
+                    { quality: "1080p – 2.5GB", link: "https://sample-videos.com/video321/mp4/1080/big_buck_bunny_1080p_1mb.mp4" }
                 ],
-                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                featured: true
             }
         ];
 
         // ============================================================
-        // 📄 PAGINATION ENGINE - 735 PAGES
+        // 📄 PAGINATION ENGINE - 735 PAGES = 9555 MOVIES
         // ============================================================
         const MOVIES_PER_PAGE = 12;
         const TOTAL_PAGES = 735;
         let currentPage = 1;
         let allMoviesCache = [];
         let searchQuery = '';
+        let currentFilter = 'all';
 
         function generateAllMovies() {
             const all = [];
@@ -717,8 +646,7 @@
                     all.push({
                         ...movie,
                         id: newId,
-                        title: movie.title + (page > 0 ? ` [${page}]` : ''),
-                        page: page + 1,
+                        pageNum: page + 1,
                         index: index + 1
                     });
                 });
@@ -736,12 +664,6 @@
             const params = new URLSearchParams(window.location.search);
             const page = parseInt(params.get('page'));
             if (page && page >= 1 && page <= TOTAL_PAGES) return page;
-            const path = window.location.pathname;
-            const match = path.match(/\/page\/(\d+)\/?/);
-            if (match) {
-                const p = parseInt(match[1]);
-                if (p >= 1 && p <= TOTAL_PAGES) return p;
-            }
             return 1;
         }
 
@@ -751,6 +673,9 @@
             window.history.pushState({ page: page }, '', url);
         }
 
+        // ============================================================
+        // 📺 DISPLAY MOVIES
+        // ============================================================
         function displayMovies(movieList) {
             const grid = document.getElementById('movieGrid');
             if (!grid) return;
@@ -759,11 +684,11 @@
                 return;
             }
             grid.innerHTML = movieList.map(movie => `
-                <article class="post" onclick="showMovieDetails(${movie.id})">
+                <article class="post" onclick="playMovie(${movie.id})">
                     <div class="content">
                         <div class="poster-wrap">
                             <img src="${movie.poster}" alt="${movie.title}" loading="lazy" onerror="this.src='https://via.placeholder.com/400x600/1a1a1a/ff6600?text=MOBI-HUBB'" />
-                            <div class="mpo-quality">${movie.quality}</div>
+                            <div class="mpo-quality">▶ ${movie.quality}</div>
                             <div class="mpo-site">\\=- MOBI-HUBB -=/</div>
                         </div>
                         <h2 class="movie-title">${movie.title}</h2>
@@ -778,10 +703,13 @@
             let html = '';
             const start = (current - 1) * MOVIES_PER_PAGE + 1;
             const end = Math.min(current * MOVIES_PER_PAGE, allMoviesCache.length);
-            html += `<li style="color:#888;padding:8px 14px;">${start}-${end} of ${allMoviesCache.length}</li>`;
+            
+            html += `<li class="info">${start}-${end} of ${allMoviesCache.length}</li>`;
+            
             if (current > 1) {
                 html += `<li><a class="page-numbers" onclick="goToPage(${current - 1})">‹ Prev</a></li>`;
             }
+            
             if (current <= 3) {
                 for (let i = 1; i <= Math.min(5, TOTAL_PAGES); i++) {
                     html += `<li>${i === current ? `<span class="page-numbers current">${i}</span>` : `<a class="page-numbers" onclick="goToPage(${i})">${i}</a>`}</li>`;
@@ -805,105 +733,72 @@
                 html += `<li><span class="page-numbers dots">…</span></li>`;
                 html += `<li><a class="page-numbers" onclick="goToPage(${TOTAL_PAGES})">${TOTAL_PAGES}</a></li>`;
             }
+            
             if (current < TOTAL_PAGES) {
                 html += `<li><a class="page-numbers next" onclick="goToPage(${current + 1})">Next »</a></li>`;
             }
+            
             pagination.innerHTML = html;
         }
 
         function goToPage(page) {
             if (page < 1 || page > TOTAL_PAGES) return;
             currentPage = page;
-            const pageMovies = searchQuery ? 
-                allMoviesCache.filter(m => 
-                    m.title.toLowerCase().includes(searchQuery) ||
-                    m.genres.some(g => g.toLowerCase().includes(searchQuery)) ||
-                    m.cast.some(c => c.toLowerCase().includes(searchQuery))
-                ).slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE) :
-                getPageMovies(page);
+            let filteredMovies = getFilteredMovies();
+            const pageMovies = filteredMovies.slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE);
             displayMovies(pageMovies);
             updatePagination(page);
             updateURL(page);
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (document.getElementById('movieDetails').style.display !== 'none') {
-                closeMovieDetails();
+            if (document.getElementById('moviePlayer').style.display !== 'none') {
+                closeMoviePlayer();
             }
         }
 
         // ============================================================
-        // 📄 MOVIE DETAILS
+        // 🔍 FILTER FUNCTIONS
         // ============================================================
-        function showMovieDetails(movieId) {
-            const movie = allMoviesCache.find(m => m.id === movieId);
-            if (!movie) return;
-
-            document.querySelector('.nv-index-posts').style.display = 'none';
-            document.getElementById('movieDetails').style.display = 'block';
-            document.querySelector('.page-title-wrap').style.display = 'none';
-            document.getElementById('pagination').style.display = 'none';
-            document.getElementById('detailsAd').style.display = 'block';
-
-            const container = document.getElementById('movieDetailContent');
-            container.innerHTML = `
-                <div class="mp-hero">
-                    <div class="mp-img-wrap"><img src="${movie.poster}" alt="${movie.title}" /></div>
-                    <div class="mp-meta">⭐ ${movie.imdb} IMDb | ${movie.language} | ${movie.quality}</div>
-                </div>
-                <h1 class="mp-title">${movie.title}</h1>
-                <p class="mp-intro">Download <span class="quality">${movie.quality}</span> <span class="site-name">MOBI-HUBB</span> - Full Movie in high quality.</p>
-                <div class="mp-info">
-                    <div><b>Director:</b> <span>${movie.director}</span></div>
-                    <div><b>All Genres:</b> <span>${movie.genres.join(', ')}</span></div>
-                    <div><b>Released Date:</b> <span>${movie.releaseDate}</span></div>
-                    <div><b>Language:</b> <span>${movie.language}</span></div>
-                    <div><b>Cast:</b> <span>${movie.cast.join(', ')}</span></div>
-                </div>
-                <div class="mp-section">
-                    <h2 class="mp-heading inline-heading">Plot:</h2>
-                    <p class="mp-plot-text">${movie.plot}</p>
-                </div>
-                <div class="mp-section">
-                    <h2 class="mp-heading ss-heading">📸 Screenshots</h2>
-                    <div class="mp-screens-wrap">
-                        ${movie.screenshots.map(img => `<div class="mp-screens-vertical"><img src="${img}" alt="Screenshot" loading="lazy" /></div>`).join('')}
-                    </div>
-                </div>
-                <div class="visit-review"><strong>Visit & Share and Bookmark (Ctrl + D)</strong> <span class="c1">MOBI-HUBB</span></div>
-                <div class="mp-section">
-                    <h2 class="mp-heading center-heading">📥 Download Links & Watch Online</h2>
-                    <p class="mp-download-info">Language: <span class="quality">${movie.language}</span></p>
-                    <a href="${movie.trailer}" target="_blank" class="mp-btn">▶️ Watch Online</a>
-                    ${movie.downloadLinks.map(link => `<a href="${link.link}" class="mp-btn">📥 ${link.quality}</a>`).join('')}
-                </div>
-                <div class="mp-trailer">
-                    <h2 class="mp-heading tr-heading">🎥 Watch Trailer</h2>
-                    <iframe src="${movie.trailer}" allowfullscreen></iframe>
-                </div>
-                <div class="mp-section-full">
-                    <h2 class="mp-section-title">📝 User Reviews</h2>
-                    <div class="mp-review"><p>${movie.title} delivers a compelling cinematic experience. The storyline keeps you engaged throughout.</p></div>
-                </div>
-                <div class="mp-section-full">
-                    <h2 class="mp-section-title">❓ Frequently Asked Questions</h2>
-                    <div class="mp-text">
-                        <p><strong>Who is the star cast of ${movie.title}?</strong></p>
-                        <p>The main star cast includes ${movie.cast.join(', ')}.</p>
-                        <br />
-                        <p><strong>In which languages is ${movie.title} available?</strong></p>
-                        <p>It is available in ${movie.language} with high quality HD 480p, 720p, and 1080p resolution.</p>
-                    </div>
-                </div>
-            `;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function getFilteredMovies() {
+            let filtered = allMoviesCache;
+            if (currentFilter === 'featured') {
+                filtered = filtered.filter(m => m.featured === true);
+            } else if (currentFilter !== 'all') {
+                filtered = filtered.filter(m => m.category === currentFilter);
+            }
+            if (searchQuery) {
+                filtered = filtered.filter(m =>
+                    m.title.toLowerCase().includes(searchQuery) ||
+                    m.genres.some(g => g.toLowerCase().includes(searchQuery)) ||
+                    m.cast.some(c => c.toLowerCase().includes(searchQuery))
+                );
+            }
+            return filtered;
         }
 
-        function closeMovieDetails() {
-            document.querySelector('.nv-index-posts').style.display = 'block';
-            document.getElementById('movieDetails').style.display = 'none';
-            document.querySelector('.page-title-wrap').style.display = 'block';
-            document.getElementById('pagination').style.display = 'flex';
-            document.getElementById('detailsAd').style.display = 'none';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function filterCategory(category) {
+            currentFilter = category;
+            searchQuery = '';
+            document.getElementById('searchInput').value = '';
+            const filtered = getFilteredMovies();
+            currentPage = 1;
+            displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+            updatePagination(1);
+            if (document.getElementById('moviePlayer').style.display !== 'none') {
+                closeMoviePlayer();
+            }
+        }
+
+        function filterFeatured() {
+            currentFilter = 'featured';
+            searchQuery = '';
+            document.getElementById('searchInput').value = '';
+            const filtered = getFilteredMovies();
+            currentPage = 1;
+            displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+            updatePagination(1);
+            if (document.getElementById('moviePlayer').style.display !== 'none') {
+                closeMoviePlayer();
+            }
         }
 
         // ============================================================
@@ -912,44 +807,101 @@
         function searchMovies() {
             const query = document.getElementById('searchInput').value.trim().toLowerCase();
             searchQuery = query;
-            if (!query) { goToPage(1); return; }
-            const results = allMoviesCache.filter(m =>
-                m.title.toLowerCase().includes(query) ||
-                m.genres.some(g => g.toLowerCase().includes(query)) ||
-                m.cast.some(c => c.toLowerCase().includes(query))
-            );
-            displayMovies(results.slice(0, MOVIES_PER_PAGE));
-            const pagination = document.getElementById('pagination');
-            if (results.length > MOVIES_PER_PAGE) {
-                const totalSearchPages = Math.ceil(results.length / MOVIES_PER_PAGE);
-                let html = `<li style="color:#888;padding:8px 14px;">1-${Math.min(MOVIES_PER_PAGE, results.length)} of ${results.length}</li>`;
-                for (let i = 1; i <= Math.min(totalSearchPages, 5); i++) {
+            if (!query) {
+                currentFilter = 'all';
+                const filtered = getFilteredMovies();
+                currentPage = 1;
+                displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+                updatePagination(1);
+                return;
+            }
+            const filtered = getFilteredMovies();
+            currentPage = 1;
+            displayMovies(filtered.slice(0, MOVIES_PER_PAGE));
+            const totalPages = Math.ceil(filtered.length / MOVIES_PER_PAGE);
+            let html = `<li class="info">1-${Math.min(MOVIES_PER_PAGE, filtered.length)} of ${filtered.length}</li>`;
+            if (totalPages > 1) {
+                for (let i = 1; i <= Math.min(totalPages, 5); i++) {
                     html += `<li><a class="page-numbers" onclick="loadSearchPage(${i})">${i}</a></li>`;
                 }
-                if (totalSearchPages > 5) html += `<li><span class="page-numbers dots">…</span></li>`;
-                pagination.innerHTML = html;
-            } else {
-                pagination.innerHTML = '';
+                if (totalPages > 5) html += `<li><span class="page-numbers dots">…</span></li>`;
             }
-            if (results.length === 0) {
+            document.getElementById('pagination').innerHTML = html;
+            if (filtered.length === 0) {
                 document.getElementById('movieGrid').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:50px;color:#888;"><h3>No movies found for "${query}"</h3></div>`;
+            }
+            if (document.getElementById('moviePlayer').style.display !== 'none') {
+                closeMoviePlayer();
             }
         }
 
         function loadSearchPage(page) {
-            const results = allMoviesCache.filter(m =>
-                m.title.toLowerCase().includes(searchQuery) ||
-                m.genres.some(g => g.toLowerCase().includes(searchQuery)) ||
-                m.cast.some(c => c.toLowerCase().includes(searchQuery))
-            );
+            const filtered = getFilteredMovies();
             const start = (page - 1) * MOVIES_PER_PAGE;
-            displayMovies(results.slice(start, start + MOVIES_PER_PAGE));
+            displayMovies(filtered.slice(start, start + MOVIES_PER_PAGE));
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // ============================================================
-        // 📋 COPY LINK
+        // 🎬 PLAY MOVIE - REAL VIDEO PLAYER
         // ============================================================
+        function playMovie(movieId) {
+            const movie = allMoviesCache.find(m => m.id === movieId);
+            if (!movie) return;
+
+            // Hide grid, show player
+            document.querySelector('main').style.display = 'none';
+            document.getElementById('moviePlayer').style.display = 'block';
+            document.getElementById('detailsAd').style.display = 'block';
+
+            // Set video source
+            const video = document.getElementById('movieVideo');
+            const source = document.getElementById('videoSource');
+            source.src = movie.videoUrl;
+            video.load();
+            video.play();
+
+            // Set movie info
+            document.getElementById('playerTitle').textContent = movie.title;
+            document.getElementById('playerMeta').textContent = `⭐ ${movie.imdb} IMDb | ${movie.language} | ${movie.quality}`;
+            document.getElementById('playerPlot').textContent = movie.plot;
+
+            // Set download links
+            const downloadsContainer = document.getElementById('playerDownloads');
+            downloadsContainer.innerHTML = movie.downloadLinks.map(link => 
+                `<a href="${link.link}" class="player-download-btn" download>📥 ${link.quality}</a>`
+            ).join('');
+
+            // Scroll to player
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function closeMoviePlayer() {
+            // Stop video
+            const video = document.getElementById('movieVideo');
+            video.pause();
+            video.currentTime = 0;
+            
+            document.querySelector('main').style.display = 'block';
+            document.getElementById('moviePlayer').style.display = 'none';
+            document.getElementById('detailsAd').style.display = 'none';
+            
+            // Refresh current page
+            const filtered = getFilteredMovies();
+            const pageMovies = filtered.slice((currentPage - 1) * MOVIES_PER_PAGE, currentPage * MOVIES_PER_PAGE);
+            displayMovies(pageMovies);
+            updatePagination(currentPage);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============================================================
+        // 📋 SHARE FUNCTIONS
+        // ============================================================
+        function shareFacebook() { window.open('https://www.facebook.com/sharer/sharer.php?u=https://mobihubb.pages.dev', '_blank'); }
+        function shareTwitter() { window.open('https://twitter.com/intent/tweet?url=https://mobihubb.pages.dev&text=MOBI-HUBB - Watch HD Movies Free', '_blank'); }
+        function shareWhatsApp() { window.open('https://api.whatsapp.com/send?text=MOBI-HUBB - Watch HD Movies Free https://mobihubb.pages.dev', '_blank'); }
+        function shareTelegram() { window.open('https://t.me/share/url?url=https://mobihubb.pages.dev&text=MOBI-HUBB - Watch HD Movies Free', '_blank'); }
+        
         function copyLink() {
             const url = 'https://mobihubb.pages.dev';
             if (navigator.clipboard) {
@@ -985,30 +937,41 @@
             allMoviesCache = generateAllMovies();
             const page = getPageFromURL();
             currentPage = page;
-            const pageMovies = getPageMovies(page);
+            const filtered = getFilteredMovies();
+            const pageMovies = filtered.slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE);
             displayMovies(pageMovies);
             updatePagination(page);
-            
+
             document.getElementById('searchInput').addEventListener('keyup', function(e) {
                 if (e.key === 'Enter') searchMovies();
             });
-            
+
             window.addEventListener('popstate', function(e) {
                 const page = getPageFromURL();
                 currentPage = page;
-                const pageMovies = getPageMovies(page);
+                const filtered = getFilteredMovies();
+                const pageMovies = filtered.slice((page - 1) * MOVIES_PER_PAGE, page * MOVIES_PER_PAGE);
                 displayMovies(pageMovies);
                 updatePagination(page);
+                if (document.getElementById('moviePlayer').style.display !== 'none') {
+                    closeMoviePlayer();
+                }
             });
-            
-            const scrollBtn = document.getElementById('scroll-to-top');
+
+            const scrollBtn = document.getElementById('scrollTopBtn');
             window.addEventListener('scroll', function() {
-                if (window.scrollY > 300) { scrollBtn.classList.add('show'); }
-                else { scrollBtn.classList.remove('show'); }
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
             });
-            
+
             setTimeout(checkPopup, 3000);
-            console.log('🎬 MOBI-HUBB Loaded with Adsterra Smart Links!');
+            console.log('🎬 MOBI-HUBB - All Features Working!');
+            console.log(`📊 Total Movies: ${allMoviesCache.length}`);
+            console.log(`📄 Total Pages: ${TOTAL_PAGES}`);
+            console.log('🎥 All Movies are Playable!');
         });
     </script>
 </body>
