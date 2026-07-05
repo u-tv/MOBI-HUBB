@@ -1,5 +1,116 @@
-git init
-git add .
-git commit -m "MOBI-HUBB - 735 Pages Real Working"
-git remote add origin https://github.com/yourusername/mobi-hubb.gitgit branch -M main
-git push -u origin main
+# ============================================
+# macOS / Linux System Files
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+*.log
+
+# ============================================
+# Editor / IDE Files
+# ============================================
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# Node / NPM
+# ============================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ============================================
+# Build / Dist
+# ============================================
+dist/
+build/
+*.min.js
+*.min.css
+*.bundle.js
+*.chunk.js
+
+# ============================================
+# Environment & Secrets
+# ============================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+
+# ============================================
+# Backup Files
+# ============================================
+*.bak
+*.backup
+*.old
+*.orig
+
+# ============================================
+# Cloudflare / Server
+# ============================================
+.wrangler/
+.cf/
+cloudflare/
+*.wrangler
+
+# ============================================
+# WordPress (if any)
+# ============================================
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup-*
+wp-content/wflogs/
+
+# ============================================
+# Database
+# ============================================
+*.sql
+*.sqlite
+*.db
+
+# ============================================
+# Cache
+# ============================================
+.cache/
+cache/
+*.cache
+
+# ============================================
+# Others
+# ============================================
+*.zip
+*.rar
+*.7z
+*.tar.gz
+*.mp4
+*.avi
+*.mkv
+*.mov
+
+# Keep _redirects (Cloudflare needs it)
+!_redirects
+!.gitignore
+!index.html
+!README.md
